@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Jovellyn Q. Web Blog"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<!-- links to custom fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+  	
+  	<!-- list of css files -->
+	<link rel="stylesheet" type="text-css" href="css/mainLayout.css">
+
+	<title>Hello...</title>
+<style>
+body{
+	background-color: #ffffff;
+	font-family: Montserrat, sans-serif;
+    font-size: 20px;
+	line-height: 1.8;
+	color: #f5f6f7;
+}
+
+p{
+	font-size: 16px;
+	color: #000000;
+}
+
+.container-fluid{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.jumbotron h1 {
+	color:#000000;
+}
+
+h2, h3 {
+	color:#000000;
+}
+
+
+.navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+.navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  
+#loginSection, #loginPart{
+	margin: auto;
+
+	width: 500px;
+}
+
+</style>	
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavigationBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="home.html">Student Globe</a>
+			</div>
+			<div class="collapse navbar-collapse" id="NavigationBar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#login">Login</a></li>
+					<li><a href="#forum">Forum</a></li>
+					<li><a href="#events">Events</a></li>
+					<li><a href="#clubs&socs">Clubs and Socs.</a></li>
+					<li><a href="#shop">Shop</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Welcome to Student Globe NCIRL</h1>
+			<p>Description about website/blog</p>
+		</div>
+	</div>
+	
+	<!-- About Section -->
+	<div class="container-fluid text-center" id="about">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>LOGO OF WEBSITE</h2>
+				<p>CSS EFFECT, SLIDE UP OF LOGO</p>
+			</div>
+			<div class="col-md-8">
+				<h2>About Student Globe</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+				ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Login Section -->
+	<section class="bg-primary" id="login">
+	<div class="container-fluid text-center ">
+		<div class="row">
+			<div id="loginSection">
+				<div class="col-sm-5" id="loginPart"><!--login-->
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Login to our site</h3>
+                                <p>Enter username and password to log on:</p>
+                            </div>
+	                        <div class="form-top-right">
+	                             <i class="fa fa-key"></i>
+	                        </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" class="login-form" action = "login.php" method ="POST" >
+                            <div id="errorBox"></div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-username">Username</label>
+                                <input type="text" name="uname" placeholder="Username..." class="form-username form-control" id="uname">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="password">Password</label>
+                                <input type="text" name="upass" placeholder="Password..." class="form-password form-control" id="upass">
+                            </div>
+                            <button   class="btn" type="submit" name = "loginSub" value="Submit" >Sign in!</button>
+                            </form>
+                         </div>
+                    </div>
+                </div><!--login end -->
+                
+                <!--
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
+                -->
+                
+                <!--sign up -->
+                <div class="col-sm-5" id="signUp"> 
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Sign up now</h3>
+                                <p>Fill in the form below to get instant access:</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" action = "form.php" method ="POST" class="registration-form" id="register-form">      
+                        <div class="form-body">
+                            <div class="alert alert-info" id="message" style="display:none;">
+                                  You have registered!
+                            </div>
+                            	<div class="form-group">
+                                    <label class="sr-only" for="form-last-name">Username</label>
+                                    <input  type="text" id="upass" class="form-control" placeholder="Username" name="uname">
+                                    <span class="help-block" id="error"></span>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <label class="sr-only" for="form-last-name">Password</label>
+                                        <input   id="upass" type="password" class="form-control" placeholder="Password" name="upass">
+                                        <span class="help-block" id="error"></span>
+                                    </div>
+									<div class="form-group col-sm-6">
+                                        <label class="sr-only" for="form-last-name">Password</label>
+                                        <input  type="password" class="form-control" id="c_upass" name="c_upass" placeholder="Retype Password">
+                                        <span class="help-block" id="error"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-email">Email</label>
+                                    <input type="text" id="uemail" class="form-control" placeholder="Email" type="email" name="uemail">
+                                    <span class="help-block" id="error"></span>
+                                </div>
+                                <button  class="btn"  type="submit"  name = "FormSubmission" value="Submit">Sign me up!</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+	</div>	
+	</section>
+	
+	<!-- Forum Section 
+	<div class="container-fluid text-center" id="forum">
+		<h2>Forum</h2>
+		<div class="carousel carousel-slider center" data-indicators="true">
+		    <div class="carousel-fixed-item center">
+		      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+		    </div>
+		    <div class="carousel-item" href="#one!">
+		      <h2>First Panel</h2>
+		      <p class="white-text">This is your first panel</p>
+		    </div>
+		    <div class="carousel-item" href="#two!">
+		      <h2>Second Panel</h2>
+		      <p class="white-text">This is your second panel</p>
+		    </div>
+		    <div class="carousel-item" href="#three!">
+		      <h2>Third Panel</h2>
+		      <p class="white-text">This is your third panel</p>
+		    </div>
+		    <div class="carousel-item" href="#four!">
+		      <h2>Fourth Panel</h2>
+		      <p class="white-text">This is your fourth panel</p>
+		    </div>
+		 </div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+		<a href="#" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span>Search</a>
+	</div>-->
+	
+	<!-- Events Section -->
+	<div class="container-fluid text-center" id="events">
+		<h2 class="heading">Events</h2><br>
+		<div class="row">
+			<div class="col-md-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+				ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="col-md-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+				ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Large image section -->
+	<div class="container-fluid text-center">
+		<h2>IMAGE GOES HERE</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
+	<!-- Clubs&Socs. Section -->
+	<div class="container-fluid text-center" id="clubs&socs">
+		<h2>Clubs and Socs.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
+	<!-- Shop -->
+	<div class="container-fluid text-center" id="shop">
+		<h2>Login</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
+	<!-- Footer -->
+	<footer class="container-fluid bg-4 text-center">
+	  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+	</footer>
+
+
+	
+
+	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="jquery.validate.min.js"></script> -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
