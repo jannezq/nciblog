@@ -1,76 +1,31 @@
 <!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
 <html lang="en-us">
 <head>
-	<meta charset="utf-8"/>
-	<meta name="description" content="Jovellyn Q. Web Blog"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional Bootstrap theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/slidercss.css">
+	<link rel="stylesheet" href="css/eventscss.css">
 	
-	<!-- links to custom fonts -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="mainJavascript.js"></script>
   	
-  	<!-- list of css files -->
-	<link rel="stylesheet" type="text-css" href="css/mainLayout.css">
-
+  	
+	<meta charset="utf-8">
+	
 	<title>Hello...</title>
-<style>
-body{
-	background-color: #ffffff;
-	font-family: Montserrat, sans-serif;
-    font-size: 20px;
-	line-height: 1.8;
-	color: #f5f6f7;
-}
+<style type="text/css">
 
-p{
-	font-size: 16px;
-	color: #000000;
-}
-
-.container-fluid{
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-
-.jumbotron h1 {
-	color:#000000;
-}
-
-h2, h3 {
-	color:#000000;
-}
-
-
-.navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-.navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-  
-#loginSection, #loginPart{
-	margin: auto;
-
-	width: 500px;
-}
-
-</style>	
+</style>
 </head>
 
 <body>
 	<!-- NAVBAR -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default  navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavigationBar">
@@ -84,11 +39,11 @@ h2, h3 {
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="home.html">Home</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="#login">Login</a></li>
 					<li><a href="#forum">Forum</a></li>
 					<li><a href="#events">Events</a></li>
-					<li><a href="#clubs&socs">Clubs and Socs.</a></li>
-					<li><a href="#shop">Shop</a></li>
+					<li><a href="#clubs&socs">Clubs & Socs.</a></li>
+					<li><a href="#quiz">Quiz</a></li>
+					<li><a href="#login">Login</a></li>
 				</ul>
 			</div>
 		</div>
@@ -103,155 +58,201 @@ h2, h3 {
 	
 	<!-- About Section -->
 	<div class="container-fluid text-center" id="about">
-		<div class="row">
-			<div class="col-md-4">
-				<h2>LOGO OF WEBSITE</h2>
-				<p>CSS EFFECT, SLIDE UP OF LOGO</p>
-			</div>
-			<div class="col-md-8">
-				<h2>About Student Globe</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-				ut aliquip ex ea commodo consequat.</p>
-			</div>
-		</div>
+		<h2>About Student Globe</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
 	</div>
 	
 	<!-- Login Section -->
 	<section class="bg-primary" id="login">
-	<div class="container-fluid text-center ">
-		<div class="row">
-			<div id="loginSection">
-				<div class="col-sm-5" id="loginPart"><!--login-->
-                    <div class="form-box">
-                        <div class="form-top">
-                            <div class="form-top-left">
-                                <h3>Login to our site</h3>
-                                <p>Enter username and password to log on:</p>
-                            </div>
-	                        <div class="form-top-right">
-	                             <i class="fa fa-key"></i>
-	                        </div>
-                        </div>
-                        <div class="form-bottom">
-                            <form role="form" class="login-form" action = "login.php" method ="POST" >
-                            <div id="errorBox"></div>
-                            <div class="form-group">
-                                <label class="sr-only" for="form-username">Username</label>
-                                <input type="text" name="uname" placeholder="Username..." class="form-username form-control" id="uname">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="password">Password</label>
-                                <input type="text" name="upass" placeholder="Password..." class="form-password form-control" id="upass">
-                            </div>
-                            <button   class="btn" type="submit" name = "loginSub" value="Submit" >Sign in!</button>
-                            </form>
-                         </div>
-                    </div>
-                </div><!--login end -->
-                
-                <!--
-                <div class="col-md-1"></div>
-                <div class="col-md-1"></div>
-                -->
-                
-                <!--sign up -->
-                <div class="col-sm-5" id="signUp"> 
-                    <div class="form-box">
-                        <div class="form-top">
-                            <div class="form-top-left">
-                                <h3>Sign up now</h3>
-                                <p>Fill in the form below to get instant access:</p>
-                            </div>
-                            <div class="form-top-right">
-                                <i class="fa fa-pencil"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-bottom">
-                        <form role="form" action = "form.php" method ="POST" class="registration-form" id="register-form">      
-                        <div class="form-body">
-                            <div class="alert alert-info" id="message" style="display:none;">
-                                  You have registered!
-                            </div>
-                            	<div class="form-group">
-                                    <label class="sr-only" for="form-last-name">Username</label>
-                                    <input  type="text" id="upass" class="form-control" placeholder="Username" name="uname">
-                                    <span class="help-block" id="error"></span>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-sm-6">
-                                        <label class="sr-only" for="form-last-name">Password</label>
-                                        <input   id="upass" type="password" class="form-control" placeholder="Password" name="upass">
-                                        <span class="help-block" id="error"></span>
-                                    </div>
-									<div class="form-group col-sm-6">
-                                        <label class="sr-only" for="form-last-name">Password</label>
-                                        <input  type="password" class="form-control" id="c_upass" name="c_upass" placeholder="Retype Password">
-                                        <span class="help-block" id="error"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-email">Email</label>
-                                    <input type="text" id="uemail" class="form-control" placeholder="Email" type="email" name="uemail">
-                                    <span class="help-block" id="error"></span>
-                                </div>
-                                <button  class="btn"  type="submit"  name = "FormSubmission" value="Submit">Sign me up!</button>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> 
-	</div>	
-	</section>
-	
-	<!-- Forum Section 
-	<div class="container-fluid text-center" id="forum">
-		<h2>Forum</h2>
-		<div class="carousel carousel-slider center" data-indicators="true">
-		    <div class="carousel-fixed-item center">
-		      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-		    </div>
-		    <div class="carousel-item" href="#one!">
-		      <h2>First Panel</h2>
-		      <p class="white-text">This is your first panel</p>
-		    </div>
-		    <div class="carousel-item" href="#two!">
-		      <h2>Second Panel</h2>
-		      <p class="white-text">This is your second panel</p>
-		    </div>
-		    <div class="carousel-item" href="#three!">
-		      <h2>Third Panel</h2>
-		      <p class="white-text">This is your third panel</p>
-		    </div>
-		    <div class="carousel-item" href="#four!">
-		      <h2>Fourth Panel</h2>
-		      <p class="white-text">This is your fourth panel</p>
-		    </div>
-		 </div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-		ut aliquip ex ea commodo consequat.</p>
-		<a href="#" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span>Search</a>
-	</div>-->
-	
-	<!-- Events Section -->
-	<div class="container-fluid text-center" id="events">
-		<h2 class="heading">Events</h2><br>
-		<div class="row">
-			<div class="col-md-6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-				ut aliquip ex ea commodo consequat.</p>
-			</div>
-			<div class="col-md-6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-				ut aliquip ex ea commodo consequat.</p>
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	</section>
+	
+	<!-- Forum Section -->
+	<section class="jk-slider">
+	    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example" data-slide-to="1"></li>
+		    <li data-target="#carousel-example" data-slide-to="2"></li>
+		  </ol>
+		
+		  <div class="carousel-inner">
+		  
+		    <div class="item active">
+		    <div class="hero">
+		        <hgroup>
+		            <h1>Search for</h1>        
+		            <h3>the books you need and save ! </h3>
+		            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+		        </hgroup>
+		        
+		      </div>
+		      <div class="overlay"></div>
+		     <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+		      	
+		    </div>
+		  <div class="item">
+		  	<div class="hero">
+		        <hgroup>
+		            <h1>Search for</h1>        
+		            <h3>the books you need and save ! </h3>
+		            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+		        </hgroup>
+		        
+		      </div>
+		      
+		       <div class="overlay"></div>
+		      <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+		      
+		    </div>
+		    <div class="item">
+		    	<div class="hero">
+		        <hgroup>
+		            <h1>Search for</h1>        
+		            <h3>the books you need and save ! </h3>
+		            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+		        </hgroup>
+		        
+		      </div>
+		      	<div class="overlay"></div>
+		      <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+		      
+		    </div>
+		  </div>
+		
+		  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+		</div>
+	</section>
+	
+	<!-- Events Section https://bootsnipp.com/snippets/K3xDx -->
+	<section id="events">
+		<div class="container">
+			<div class="row">
+			    <h1 class="text-center">Events</h1>
+			    <hr>
+				<div class="story-content">
+		          <div class="row story-hover">
+		            <div class="col-sm-4 col-md-4">
+		              <div class="story">
+		                <a class="overlay" href="#">
+		                  <span class="story-content">
+		                    <i class="fa fa-users" aria-hidden="true"></i><br>
+		                    Super Team
+		                  </span>
+		                  <img src="images/event1.png" class="img-responsive" >
+		                </a>
+		              </div>
+		            </div>
+		
+		            <div class="col-sm-4 col-md-4">
+		              <div class="story">
+		                <a class="overlay" href="#">
+		                  <span class="story-content">
+		                    <i class="fa fa-camera" aria-hidden="true"></i><br>
+		                    Digital
+		                  </span>
+		                  <img src="images/event2.png" class="img-responsive" >
+		                </a>
+		              </div>
+		            </div>
+		
+		            <div class="col-xs-12 col-sm-4 col-md-4">
+		              <div class="story">
+		                <a class="overlay" href="#">
+		                  <span class="story-content">
+		                    <i class="fa fa-laptop" aria-hidden="true"></i><br>
+		                    Responsive
+		                  </span>
+		                  <img src="images/event3.jpg" class="img-responsive">
+		                </a>
+		              </div>
+		            </div>
+		
+		          </div>
+		        </div>
+			</div>
+		</div>
+	</section>
 	
 	<!-- Large image section -->
 	<div class="container-fluid text-center">
@@ -263,37 +264,31 @@ h2, h3 {
 	
 	<!-- Clubs&Socs. Section -->
 	<div class="container-fluid text-center" id="clubs&socs">
-		<h2>Clubs and Socs.</h2>
+		<h2>Clubs & Socs.</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
 		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
 		ut aliquip ex ea commodo consequat.</p>
 	</div>
 	
-	<!-- Shop -->
-	<div class="container-fluid text-center" id="shop">
-		<h2>Login</h2>
+	<!-- Quiz-->
+	<div class="container-fluid text-center" id="quiz">
+		<h2>Quiz !!</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
 		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
 		ut aliquip ex ea commodo consequat.</p>
 	</div>
+	<div class="" id="president">
+			<img src="images/president.jpg" alt="President" style="float:left;width:42px;height:42px;">
+		</div>
 	
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
 	  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 	</footer>
 
-
-	
-
-	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- Latest compiled and minified JavaScript 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="jquery.validate.min.js"></script> -->
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <p>Hello world hey hey wel hjvgjhvjbhvhjhb </p>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
