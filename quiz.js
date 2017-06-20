@@ -1,12 +1,5 @@
 // JavaScript File
 
-
-
-
-
-
-
-
 var text2display = "";
 var answersBox = document.getElementById("answersBox");
 var answers = new Array(9);
@@ -50,6 +43,7 @@ for(var i = 0; i < noOfRadios; i++)
 	{
 	if (qs[i].value=="correct") {
 	 text2display = text2display + "you got that correct\n";
+ // alert("Congratulations on winning this weeks quiz. Go to the SU for your weekly prize!!!!");
 	 //get the user details which are logged into the system
 	 // and if they win display there user email 
 	 
@@ -57,8 +51,9 @@ for(var i = 0; i < noOfRadios; i++)
 	}
 	 else {
 	     
-	     text2display = answers.valueOf(s);
-	     document.getElementById("answersBox").value = text2display;
+	    text2display = answers.valueOf(s);
+	    document.getElementById("answersBox").value = text2display;
+	     //alert("Congratulations on winning this weeks quiz. Go to the SU for your weekly prize!!!!");
 	     
 	break;
 }
@@ -77,4 +72,5 @@ for(var i = 0; i <questions.length; i++)
  checkQs(questions[i]);
 }
 document.getElementById("answersBox").value = text2display;
+alert("Congratulations on winning this weeks quiz. Go to the SU for your weekly prize!!!!");
  }
