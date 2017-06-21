@@ -28,13 +28,13 @@ if(isset($_POST['submit'])){
 
 
     
-    header('Location: home.html');
+    header('Location: signedInHome.php');
     exit();
 }
 
 ?>
 
-
+<!-- DO NOT DELETE 
 <form method="post">
     <center>
     <table border = "1">
@@ -60,3 +60,4 @@ if(isset($_POST['submit'])){
     </table>
     </center>
 </form>
+-->

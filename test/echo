@@ -1,0 +1,24 @@
+  <?php
+$r = $link->query("SELECT * FROM posts");
+while($rf = $r->fetch_assoc())
+{
+  echo "
+          {$rf['title']}<br/>
+          <td>{$rf['summary']}<br/>
+          <td>{$rf['author']}<br/>
+          <td>{$rf['category]}<br/>
+          <td>{$rf['content']"
+}
+?>
+
+ <?php 
+ 
+ $sql = "SELECT * FROM posts";
+$query = mysql_query($sql);
+while($row = mysql_fetch_assoc($query)){
+    
+       echo htmlspecialchars_decode(stripslashes($row['title'])); //The details is what contains the <strong>Test</strong>
+
+
+}
+?>
