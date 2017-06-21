@@ -3,9 +3,10 @@
 <html lang="en-us">
 <head>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/imghover.css">
+	<link rel="stylesheet" href="css/slidercss.css">
+	<link rel="stylesheet" href="css/eventscss.css">
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -40,8 +41,8 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#forum">Forum</a></li>
 					<li><a href="#events">Events</a></li>
-					<li><a href="#clubs&socs">Clubs & Socs.</a></li>
-					<li><a href="#shop">Shop</a></li>
+					<li><a href="#clubsnsoc">Clubs & Socs.</a></li>
+					<li><a href="#GameQuiz">Quiz</a></li>
 				</ul>
 			</div>
 		</div>
@@ -62,8 +63,8 @@
 		ut aliquip ex ea commodo consequat.</p>
 	</div>
 	
-	<!-- Login Section -->
-	<section class="bg-primary" id="login">
+	<!-- Login Section 
+	<section class="bg-primary">
 	<div class="container">
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
@@ -138,51 +139,113 @@
 			</div>
 		</div>
 	</div>
-	</section>
+	</section>-->
 	
-	<!-- Forum Section --><!--https://bootsnipp.com/snippets/rv1xd-->
-	<section id="forumS">
-	<div class="container-fluid text-center" id="forum">
-		<h2>Forum</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-		ut aliquip ex ea commodo consequat.</p>
-		<a href="#" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span>Search</a>
-	</div>
-	</section>
-	
-	<!-- Events Section https://mdbootstrap.com/css/hover-effects/ -->
-	<section id="events">
-	<div class="container-fluid text-center" id="events">
-		<h2>Events</h2>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="img">
-					<div class="hovereffect">
-						<img class="image" src="images/event1.png" border="1">
-						<div class="middle">
-							<div class="text">
-								<h2>Christmas Session</h2>
-								<a class="info" href="#">Find out more</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="img">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/event2.png" border="1">
-						<div class="overlay">
-							<h2>Lantern Festival </h2>
-							<a class="info" href="#">Find out more</a>
-						</div>
-					</div>
-				</div>
+	<!-- Forum Section -->
+	<section class="jk-slider" >
+	<div class="container">
+			<div class="row">
+				<h1 id="forum" class="text-center">Clubs and Societies</h1>
 			</div>
 		</div>
-	</div>
+		<hr>
+	    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example" data-slide-to="1"></li>
+		    <li data-target="#carousel-example" data-slide-to="2"></li>
+		    <li data-target="#carousel-example" data-slide-to="3"></li>
+		  </ol>
+		
+		  <div class="carousel-inner">
+		  
+		    <div class="item active">
+		    <div class="hero">
+		            <h1>Education</h1>
+		      </div>
+		     <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+		    </div>
+		    
+		  <div class="item">
+		    <div class="hero">
+		            <h1>Sports</h1>
+		      </div>
+		     <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+		    </div>
+		    
+		    <div class="item">
+		    <div class="hero">
+		            <h1>Student Union</h1>
+		      </div>
+		     <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+		    </div>
+		    
+		    <div class="item">
+		    <div class="hero">
+		            <h1>News</h1>
+		      </div>
+		     <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+		    </div>
+		    
+		  </div>
+		
+		  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+		</div>
+	</section>
+	
+	<!-- Events Section https://bootsnipp.com/snippets/K3xDx -->
+	<section >
+		<div id="events" class="container">
+			<div class="row">
+			    <h1  class="text-center">Events</h1>
+			    <hr>
+				<div class="story-content">
+		          <div class="row story-hover">
+		            <div class="col-sm-4 col-md-4">
+		              <div class="story">
+		                <a class="overlay" href="#">
+		                  <span class="story-content">
+		                    <i class="fa fa-users" aria-hidden="true"></i><br>
+		                    Halloween Sesh
+		                  </span>
+		                  <img src="images/event1.png" class="img-responsive" >
+		                </a>
+		              </div>
+		            </div>
+		
+		            <div class="col-sm-4 col-md-4">
+		              <div class="story">
+		                <a class="overlay" href="#">
+		                  <span class="story-content">
+		                    <i class="fa fa-camera" aria-hidden="true"></i><br>
+		                   	Lantern Festival
+		                  </span>
+		                  <img src="images/event2.png" class="img-responsive" >
+		                </a>
+		              </div>
+		            </div>
+		
+		            <div class="col-xs-12 col-sm-4 col-md-4">
+		              <div class="story">
+		                <a class="overlay" href="#">
+		                  <span class="story-content">
+		                    <i class="fa fa-laptop" aria-hidden="true"></i><br>
+		                    Jobs Fair
+		                  </span>
+		                  <img src="images/event3.jpg" class="img-responsive">
+		                </a>
+		              </div>
+		            </div>
+		
+		          </div>
+		        </div>
+			</div>
+		</div>
 	</section>
 	
 	<!-- Large image section -->
@@ -194,21 +257,68 @@
 	</div>
 	
 	<!-- Clubs&Socs. Section -->
-	<div class="container-fluid text-center" id="clubs&socs">
-		<h2>Clubs & Socs.</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-		ut aliquip ex ea commodo consequat.</p>
-	</div>
+	<section class="jk-slider" id="clubsnsoc">
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center">Clubs and Societies</h1>
+			</div>
+		</div>
+		<hr>
+	    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example" data-slide-to="1"></li>
+		    <li data-target="#carousel-example" data-slide-to="2"></li>
+		    <li data-target="#carousel-example" data-slide-to="3"></li>
+		  </ol>
+		
+		  <div class="carousel-inner">
+		  
+		    <div class="item active">
+		    <div class="hero">
+		           <a href="clubsnsoc.html"><h1>Basketball Club</h1></a>
+		      </div>
+		     <a href="clubsnsoc.html"><img src="images/basketball.jpg" /></a>
+		    </div>
+		    
+		  <div class="item">
+		    <div class="hero">
+		            <h1>Gaming Society</h1>
+		      </div>
+		     <a href="clubsnsoc.html"><img src="images/gaming.png" /></a>
+		    </div>
+		    
+		    <div class="item">
+		    <div class="hero">
+		            <h1>Badminton Club</h1>
+		      </div>
+		     <a href="clubsnsoc.html"><img src="images/badminton.jpg" /></a>
+		    </div>
+		    
+		    <div class="item">
+		    <div class="hero">
+		            <h1>Fashion Society</h1>
+		      </div>
+		     <a href="clubsnsoc.html"><img src="images/fashion.jpg" /></a>
+		    </div>
+		    
+		  </div>
+		
+		  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+		</div>
+	</section>
 	
-	<!-- Shop -->
-	<div class="container-fluid text-center" id="shop">
-		<h2>Login</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-		ut aliquip ex ea commodo consequat.</p>
+	<!-- Quiz-->
+	<div class="container-fluid text-center" id="GameQuiz">
+		<h2>Quiz !!</h2>
+		<p>Do you have what it takes to take on the weekly challenge. Get all Right win a Prize. Challenge accepted? <a href="GameQuiz.html">Click here now</a></p>
 	</div>
-	
+
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
 	  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
