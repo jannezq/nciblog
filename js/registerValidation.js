@@ -17,6 +17,7 @@ https://bootsnipp.com/snippets/8ANqZ
 
 */
 
+
 function Validate(username) {
     username.value = username.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
 }

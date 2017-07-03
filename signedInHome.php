@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
 <html lang="en-us">
@@ -208,7 +212,7 @@
 	
 	<!-- Events Section https://bootsnipp.com/snippets/K3xDx -->
 	<section id="events" >
-		<div  class="container">
+		<div  class="container slideanim">
 			<div class="row">
 			    <h1  class="text-center">Events</h1>
 			    <hr>
@@ -255,14 +259,6 @@
 			</div>
 		</div>
 	</section>
-	
-	<!-- Large image section -->
-	<div class="container-fluid text-center">
-		<h2>IMAGE GOES HERE</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-		ut aliquip ex ea commodo consequat.</p>
-	</div>
 	
 	<!-- Clubs&Socs. Section -->
 	<section class="jk-slider" id="clubsnsoc">
@@ -321,6 +317,14 @@
 		</div>
 	</section>
 	
+	<!-- Large image section -->
+	<div class="container-fluid text-center slideanim">
+		<h2>IMAGE GOES HERE</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
 	<!-- Quiz-->
 	<div class="container-fluid text-center" id="GameQuiz">
 		
@@ -330,7 +334,14 @@
 
 		<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
-	  <p>Footer section</a></p> 
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Contact information</h3>
+			</div>
+			<div class="col-md-6">
+				<h3>Site links and other information</h3>
+			</div>
+		</div>
 	</footer>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

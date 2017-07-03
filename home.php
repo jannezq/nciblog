@@ -1,15 +1,13 @@
 <!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+
 <?php
 
 	session_start();
-	
-	$username = "Brian" || "Jason" || "Jovellyn" || "Habeeb";
-	$password = "password";
-	
+
 	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
 	
 		{
-			header("Location: signedInHome.php");
+			header("Location: login_proccess.php");
 		}
 	
 	if (isset($_POST['username']) && isset($_POST['password']))
@@ -19,10 +17,11 @@
 					
 					{
 						$_SESSION['loggedin'] = true;
-						header("Location: signedInHome.php");
+						header("Location: login_proccess.php");
 					}
 			}
 ?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -58,7 +57,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="home.html">Student Globe</a>
+				<a class="navbar-brand" href="home.php">Student Globe</a>
 			</div>
 			<div class="collapse navbar-collapse" id="NavigationBar">
 				<ul class="nav navbar-nav navbar-right">
@@ -102,7 +101,7 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="" method="post" role="form" style="display: block;">
+								<form id="login-form" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -116,7 +115,7 @@
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+												<input type="submit" name="submit" id="submit" tabindex="4" class="form-control btn btn-login" value="Log In">
 											</div>
 										</div>
 									</div>
@@ -240,30 +239,31 @@
 	</section>
 	
 	<!-- Events Section https://bootsnipp.com/snippets/K3xDx -->
-	<section >
-		<div id="events" class="container">
+	<section>
+		<div class="container" id="events">
 			<div class="row">
-			  <hr>
+			    <h1 class="text-center">Events</h1><br>
+			    <hr>
 				<div class="story-content">
 		          <div class="row story-hover">
 		            <div class="col-sm-4 col-md-4">
 		              <div class="story">
-		                <a class="overlay" href="#">
+		                <a class="over" href="eventsMain.php">
 		                  <span class="story-content">
 		                    <i class="fa fa-users" aria-hidden="true"></i><br>
-		                    Halloween Sesh
+		                    Freshers Week
 		                  </span>
-		                  <img src="images/event1.png" class="img-responsive" >
+		                  <img src="images/event1.jpg" class="img-responsive" >
 		                </a>
 		              </div>
 		            </div>
 		
 		            <div class="col-sm-4 col-md-4">
 		              <div class="story">
-		                <a class="overlay" href="#">
+		                <a class="over" href="#">
 		                  <span class="story-content">
 		                    <i class="fa fa-camera" aria-hidden="true"></i><br>
-		                   	Lantern Festival
+		                    Digital
 		                  </span>
 		                  <img src="images/event2.png" class="img-responsive" >
 		                </a>
@@ -272,10 +272,10 @@
 		
 		            <div class="col-xs-12 col-sm-4 col-md-4">
 		              <div class="story">
-		                <a class="overlay" href="#">
+		                <a class="over" href="#">
 		                  <span class="story-content">
 		                    <i class="fa fa-laptop" aria-hidden="true"></i><br>
-		                    Jobs Fair
+		                    Responsive
 		                  </span>
 		                  <img src="images/event3.jpg" class="img-responsive">
 		                </a>
@@ -287,14 +287,6 @@
 			</div>
 		</div>
 	</section>
-	
-	<!-- Large image section -->
-	<div class="container-fluid text-center">
-		<h2>IMAGE GOES HERE</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-		ut aliquip ex ea commodo consequat.</p>
-	</div>
 	
 	<!-- Clubs&Socs. Section -->
 	<section class="jk-slider" id="clubsnsoc">
@@ -314,28 +306,28 @@
 		    <div class="hero">
 		          <h1>Basketball Club</h1>
 		      </div>
-		     <a href="clubsnsoc.html"><img src="images/basketball.jpg" /></a>
+		     <a href="clubsnsoc.php"><img src="images/basketball.jpg" /></a>
 		    </div>
 		    
 		  <div class="item">
 		    <div class="hero">
 		            <h1>Gaming Society</h1>
 		      </div>
-		     <a href="clubsnsoc.html"><img src="images/gaming.png" /></a>
+		     <a href="clubsnsoc.php"><img src="images/gaming.png" /></a>
 		    </div>
 		    
 		    <div class="item">
 		    <div class="hero">
 		            <h1>Badminton Club</h1>
 		      </div>
-		     <a href="clubsnsoc.html"><img src="images/badminton.jpg" /></a>
+		     <a href="clubsnsoc.php"><img src="images/badminton.jpg" /></a>
 		    </div>
 		    
 		    <div class="item">
 		    <div class="hero">
 		            <h1>Fashion Society</h1>
 		      </div>
-		     <a href="clubsnsoc.html"><img src="images/fashion.jpg" /></a>
+		     <a href="clubsnsoc.php"><img src="images/fashion.jpg" /></a>
 		    </div>
 		    
 		  </div>
@@ -348,6 +340,15 @@
 		  </a>
 		</div>
 	</section>
+	
+		<!-- Large image section -->
+	<div class="container-fluid text-center slideanim">
+		<h2>IMAGE GOES HERE</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
 	
 	<!-- Quiz-->
 	<div class="container-fluid text-center" id="GameQuiz">
