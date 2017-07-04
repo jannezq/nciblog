@@ -69,7 +69,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
+        echo '<h1><a href="viewpost.php?id='.$row['id'].'">'.$row['title'].'</a></h1>';
         echo "<br>Category: ". $row["category"]. " <br>". $row["title"]. "<br>Written by " . $row["author"] . "<br>";
+        echo '<p><a href="viewpost.php?id='.$row['postID'].'">Read More</a></p>';
     }
 } else {
     echo "0 results";
