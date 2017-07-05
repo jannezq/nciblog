@@ -45,17 +45,19 @@ if(isset($_POST['submit'])){
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/categoryCss.css">
     <link rel="stylesheet" href="css/slidercss.css">
     <link rel="stylesheet" href="css/eventscss.css">
-    <link rel="stylesheet" href="css/categorycss.css">
+    
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="js/categoryjs.js"></script>
     <script src="mainJavascript.js"></script>
     <script src="js/registerValidation.js"></script>
-    <script src="js/categoryjs.js"></script>
+   
     
     
     <meta charset="utf-8">
@@ -140,25 +142,48 @@ if(isset($_POST['submit'])){
                     <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
                 </form>
         </div>
-    </div>       
+    </div>      
     
-    <div class="container center_menu">
-        <div class="row">
-            <div class="col=md-12 text-center">
-                <h3>Category</h3>
-                <div class="thread-parent">
-                    <p>Sport forum</p>
-                    <img src="http://i.imgur.com/u6NNIP6.jpg">
-                    <p>News</p>
-                    <img src="http://i.imgur.com/6Df0zT4.jpg">
-                    <p>Education</p>
-                    <img src="http://i.imgur.com/xNbkboD.jpg">
-                    <p>Student Union</p>
-                    <img src="http://i.imgur.com/lOqi4O6.jpg">
-                </div>
-            </div>
+    <!--https://bootsnipp.com/snippets/n25gZ-->
+    <div class="container">
+        <div class="content">
+    		<div class="grid">
+    			<figure class="effect-layla">
+    				<img src="http://p1.pichost.me/i/45/1685114.jpg" alt="img06"/>
+    				<figcaption>
+    					<h2>Sports <span>Forum</span></h2>
+    				</figcaption>			
+    			</figure>
+    			<figure class="effect-layla">
+    				<img src="img/3.jpg" alt="img03"/>
+    				<figcaption>
+    					<h2>Education<span>Forum</span></h2>
+    				</figcaption>			
+    			</figure>
+    		</div>
         </div>
     </div>
+    
+     <div class="container">
+        <div class="content">
+    		<div class="grid">
+    			<figure class="effect-layla">
+    				<img src="http://p1.pichost.me/i/45/1685114.jpg" alt="img06"/>
+    				<figcaption>
+    					<h2>News <span>Forum</span></h2>
+    				</figcaption>			
+    			</figure>
+    			<figure class="effect-layla">
+    				<img src="img/3.jpg" alt="img03"/>
+    				<figcaption>
+    					<h2>Student <span>Forum</span></h2>
+    				</figcaption>			
+    			</figure>
+    		</div>
+        </div>
+    </div>
+    
+    
     
     
     
