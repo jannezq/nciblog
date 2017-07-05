@@ -1,7 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,600,100italic,300italic,400italic,600italic,700,700italic);
 
 body {
 	background-color: #ffffff;
-	font-family: Montserrat, sans-serif;
+	font-family: 'Josefin Slab', serif;
     font-size: 20px;
 	line-height: 1.8;
 	color: #f5f6f7;
@@ -190,6 +191,13 @@ h2{
     color: #f4511e;
     height: 200px;
     width: 159px;
+}
+
+.contacting{
+	padding-left: 90px;
+	padding-right: 90px;
+	margin-left: 50px;
+	margin-right: 20px;
 }
 
 

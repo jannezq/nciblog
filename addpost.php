@@ -100,8 +100,8 @@ if(isset($_POST['submit'])){
     </div>
     
     <div class="container center_div">
+        <h2 class="text-center">Create New Post</h2>
         <div class="row">
-            <h2>Create New Post</h2>
                 <form method="post ">
                     <div class="form-group row">
                         <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
@@ -146,6 +146,7 @@ if(isset($_POST['submit'])){
     
     <!--https://bootsnipp.com/snippets/n25gZ-->
     <div class="container">
+        <h2 class="text-center">Create New Post</h2>
         <div class="content">
     		<div class="grid">
     			<figure class="effect-layla">

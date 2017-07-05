@@ -31,29 +31,22 @@ $row = $stmt->fetch();
 		<p><a href="home.php">Blog Index</a></p>
 
 
-		<?php	
-			echo '<div>';
-				echo '<h1>'.$row["title"].'</h1>';
-				echo '<p>'.$row["content"].'</p>';				
-			echo '</div>';
-		?>
-
-<?php
-
-   $sql = "SELECT id, title, summary, author, category, content FROM posts";
-$result = $conn->query($sql);
-
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo '<h1><a href="viewpost.php?id='.$row['id'].'">'.$row['title'].'</a></h1>';
-        echo "<br>Category: ". $row["category"]. " <br>". $row["title"]. "<br>Written by " . $row["author"] . "<br>";
-    }
-} else {
-    echo "0 results";
-}
-
-$conn->close();
-?>
+	<?php
+	
+	$query="SELECT * FROM posts";
+	$result=mysqli_query($conn , $query);
+	if(mysqli_num_rows($result) > 0) {
+		while($post=mysqli_fetch_assoc($result)) {
+					$id=$post['id'];
+					$title=$post['title'];
+					$desc=$post['summary'];
+					$tags=$post['author'];
+					$author=$post['category'];
+					$time=$post['content'];
+					$shortpost=1;  /* short post with read more  */
+          $views=showViews($id,$author);
+		}
+	}
+	?>
+	
 	</div>
