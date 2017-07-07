@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,600,100italic,300italic,400italic,600italic,700,700italic);
+
 
 .dad {
     height: 400px;
@@ -6,7 +6,6 @@
     overflow: hidden;
     position: relative;
     padding: 0;
-    
 }
 
 .dad > .son-1 {
@@ -25,7 +24,6 @@
     -webkit-background-size: cover;
     background-size: cover;
     z-index: -1;
-    margin: auto;
 }
 
 .dad > .son-2 {
@@ -56,7 +54,6 @@
 .son-text {
     color: #fcfcfc;
 	font-size: 2em;
-	font-family: 'Josefin Slab', serif;
 	text-align: center;
 	width: 100%;
 	height: 400px;
@@ -64,8 +61,6 @@
     -webkit-transition: all 1s;
     transition: all 1s;
 	padding-top: 15vh;
-	
-	
 }
 
 .son-text:hover {
@@ -77,6 +72,5 @@
 	background: #fcfcfc;
 	color: #22313F;
 	padding: 15px 45px;
-	font-family: 'Josefin Slab', serif;
-	font-style: italic;
+	
 }

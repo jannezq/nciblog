@@ -46,6 +46,24 @@
 	
 	<title>Hello...</title>
 <style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight:700;
+}
+
+.carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #016DBA;
+  }
+  .carousel-indicators li {
+      border-color: #016DBA;
+  }
+  .carousel-indicators li.active {
+      background-color: #016DBA;
+  }
+
 
 </style> 
 </head>
@@ -64,7 +82,7 @@
 			</div>
 			<div id="home" class="collapse navbar-collapse" id="NavigationBar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#home">Home</a></li>
+					<li><a href="home.php">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#forum">Forum</a></li>
 					<li><a href="#events">Events</a></li>
@@ -76,7 +94,7 @@
 		</div>
 	</nav>
 	
-	<div class="container" >
+	<div class="container text-center" >
 		<div class="jumbotron">
 			<h1>Welcome to Student Globe NCIRL</h1>
 		</div>
@@ -176,13 +194,13 @@
 	</section>
 	
 	<!-- About Section -->
-	<div class="container-fluid text-center" id="about">
+	<div class=" container container-fluid text-center" id="about">
 		<div class="row ">
-			<div class="col-md-4  slideanim">
+			<div class="col-md-5  slideanim">
 				<img id="logo" src="images/globe.png"></img>
 			</div>
-			<div class="col-md-8 text-center">
-				<h2>About Student Globe</h2>
+			<div class="col-md-7 text-center">
+				<h1>About Student Globe</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
 				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
 				ut aliquip ex ea commodo consequat.</p>
@@ -201,11 +219,10 @@
 	</section>
 	
 	<!-- Events Section https://bootsnipp.com/snippets/K3xDx -->
-	<section>
-		<div class="container" id="events">
+		<div class="container container-fluid" id="events">
+			<h1 class="text-center">Events</h1>
+			<hr>
 			<div class="row">
-			    <h1 class="text-center">Events</h1><br>
-			    <hr>
 				<div class="story-content">
 		          <div class="row story-hover">
 		            <div class="col-sm-4 col-md-4">
@@ -290,13 +307,11 @@
 		          </div>
 		        </div>
 			</div>
-			
 		</div>
-	</section>
+
 	
 	<!-- Clubs&Socs. Section https://bootsnipp.com/snippets/K3Al3-->
 	<section class="jk-slider" id="clubsnsoc">
-		
 			<hr>
 		<div id="first-slider">
 		    <div id="carousel-example-generic" class="carousel slide carousel-fade">
@@ -311,14 +326,18 @@
 		        <div class="carousel-inner" role="listbox">
 		            <!-- Item 1 -->
 		            <div class="item active slide1">
-		                <div class="row"><div class="container">
-		                    <div class="col-md-3 text-right">
-		                       <!-- <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/pfmmo6qj1/window_domain.png"> -->
-		                    </div>
-		                    <div class="col-md-9 text-right">
-		                        <h3 data-animation="animated bounceInDown">Basketball Club</h3>
-		                     </div>
-		                </div></div>
+		                <a href="InternSoc.php">
+		                	<div class="row">
+		                		<div class="container">
+		                    		<div class="col-md-3 text-right">
+		                       			<!-- <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/pfmmo6qj1/window_domain.png"> -->
+		                    		</div>
+		                    		<div class="col-md-9 text-right">
+		                        		<h3 data-animation="animated bounceInDown">International Society</h3>
+		                     		</div>
+		                		</div>
+		                	</div>
+		                </a>
 		             </div> 
 		            <!-- Item 2 -->
 		            <div class="item slide2">
@@ -365,82 +384,30 @@
 		        </a>
 		    </div>
 		</div>
-
-		
-		<!--
-		<hr>
-	    <div id="carousel-example" class="carousel slide" data-ride="carousel">
-		  <ol class="carousel-indicators">
-		    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-		    <li data-target="#carousel-example" data-slide-to="1"></li>
-		    <li data-target="#carousel-example" data-slide-to="2"></li>
-		    <li data-target="#carousel-example" data-slide-to="3"></li>
-		  </ol>
-		
-		  <div class="carousel-inner">
-		  
-		    <div class="item active">
-		    <div style="background-image: cover;" class="hero">
-		          <h1>Basketball Club</h1>
-		      </div>
-		     <a href="clubsnsoc.php"><img src="images/basketball.jpg" /></a>
-		    </div>
-		    
-		  <div class="item">
-		    <div class="hero">
-		            <h1>Gaming Society</h1>
-		      </div>
-		     <a href="clubsnsoc.php"><img src="images/gaming.png" /></a>
-		    </div>
-		    
-		    <div class="item">
-		    <div class="hero">
-		            <h1>Badminton Club</h1>
-		      </div>
-		     <a href="clubsnsoc.php"><img src="images/badminton.jpg" /></a>
-		    </div>
-		    
-		    <div class="item">
-		    <div class="hero">
-		            <h1>Fashion Society</h1>
-		      </div>
-		     <a href="clubsnsoc.php"><img src="images/fashion.jpg" /></a>
-		    </div>
-		    
-		  </div>
-		
-		  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left"></span>
-		  </a>
-		  <a class="right carousel-control" href="#carousel-example" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right"></span>
-		  </a>
-		</div>-->
 	</section>
 
 	
 	<!-- Quiz-->
-	<div class="container-fluid text-center" id="GameQuiz">
+	<div class="container container-fluid text-center" id="GameQuiz">
+		<h1 class=" text-center">Quiz</h1>
 		<div class="row ">
-			<div class="col-md-8 text-center">
-				<h2>Quiz</h2>
+			<div class="col-md-7 slideanim">
 				<h4>Do you have what it takes to take on the weekly challenge. Get all Right win a Prize. Challenge accepted? <a href="GameQuiz.html">Click here now</a></h4>
 			</div>
-			<div class="col-md-4  slideanim">
+			<div class="col-md-5  slideanim">
 				<img id="logo" src="images/globe.png"></img>
 			</div>
 			
 		</div>
 	</div>
 	
-			<!-- Large image section -->
+	<!-- Large image section -->
 	<section  >
 	<hr>
     <div class="container dad">	
 		<div class="son-2">
 		</div>
 	</div>
-	
 	<h2 class="text-center">Weekly Insprational Quotes</h2>
 		<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 		    <!-- Indicators -->
@@ -474,20 +441,13 @@
 		    </a>
 		  </div>
 		</div>
-	
 	</section>
 	
 	<!-- Container (Contact Section) -->
-	<div id="contact" class="container-fluid bg-grey contacting">
-	  <h2 class="text-center">CONTACT</h2>
-	  <div class="row">
-	    <div class="col-md-5">
-	      <p>Contact us and we'll get back to you within 24 hours.</p>
-	      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-	      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-	      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-	    </div>
-	    <div class="col-md-7 slideanim">
+	<div id="contact" class="container container-fluid bg-grey contacting">
+	  <h1 class="text-center">CONTACT</h1>
+	  <hr>
+	  <div class="col-md-12 slideanim text-center">
 	      <div class="row">
 	        <div class="col-sm-6 form-group">
 	          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -503,16 +463,31 @@
 	        </div>
 	      </div>
 	    </div>
-	  </div>
 	</div>
 	
-
+	<div id="contact" class=" container ">
+		<div class="box">
+			<div class="row">
+			  	<div class="col-md-4 slideanim">
+			    	<p>Contact us and we'll get back to you within 24 hours.</p>
+			      	<p><span class="glyphicon glyphicon-map-marker"></span>National College of Ireland</p>
+			      	<p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+			     	<p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+			    </div>
+			  	<div class="col-md-8 slideanim">
+			    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6893219782714!2d-6.245367984922087!3d53.34881737997952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8cd86e97e7%3A0x6d51b774ee7fa935!2sNational+College+of+Ireland!5e0!3m2!1sen!2sie!4v1499434401587"
+			    	width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			    </div>
+	    	</div>
+		</div>
+	</div>
+	
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center" >
 		<a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+    		<span class="glyphicon glyphicon-chevron-up"></span>
+  		</a>
+  		<p>Bootstrap Theme Made By <strong>Jovellyn Quiapos</strong></p>
 	</footer>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

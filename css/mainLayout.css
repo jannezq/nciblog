@@ -1,6 +1,9 @@
-body{
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight:700;
 	background-color: #ffffff;
-	font-family: Montserrat, sans-serif;
     font-size: 20px;
 	line-height: 1.8;
 	color: #f5f6f7

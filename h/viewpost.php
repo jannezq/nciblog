@@ -13,15 +13,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 echo "Connected successfully";
-
-
-   //$sql = "SELECT id, title, summary, author, category, content FROM posts";
-/*   
-$stmt = $conn->prepare("SELECT id, title, summary, author, category, content FROM posts WHERE id = :id");
-$stmt->execute(array(":id" => $_GET["id"]));
-$row = $stmt->fetch();
-*/
-
 ?>
 	
 	<div id="wrapper">
@@ -32,20 +23,21 @@ $row = $stmt->fetch();
 
 
 	<?php
+	$id=$row['id'];
 	
 	$query="SELECT * FROM posts";
+	if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    $query.=" WHERE ID=$id";
+
+    
 	$result=mysqli_query($conn , $query);
 	if(mysqli_num_rows($result) > 0) {
-		while($post=mysqli_fetch_assoc($result)) {
-					$id=$post['id'];
-					$title=$post['title'];
-					$desc=$post['summary'];
-					$tags=$post['author'];
-					$author=$post['category'];
-					$time=$post['content'];
-					$shortpost=1;  /* short post with read more  */
-          $views=showViews($id,$author);
+		while($row=mysqli_fetch_assoc($result)) {
+				echo "<br>Category: ". $row["category"]. " <br>". $row["title"]. "<br>Written by " . $row["author"] . "<br>";
+				echo '<p>'.$row['content'].'</p>';
 		}
+	}
 	}
 	?>
 	

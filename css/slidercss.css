@@ -5,16 +5,18 @@ Image credits: unsplash.com
 */
 /*@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);*/
 
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 
-
-
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight:700;
+}
 
 
 /********************************/
 /*          Main CSS     */
 /********************************/
 
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,600,100italic,300italic,400italic,600italic,700,700italic);
 
 #first-slider .main-container {
   padding: 0;
@@ -213,13 +215,13 @@ Image credits: unsplash.com
 
  .carousel-control.right, .carousel-control.left {
       background-image: none;
-      color: #f4511e;
+      color: #F6F6F6;
   }
   .carousel-indicators li {
-      border-color: #f4511e;
+      border-color: #F6F6F6;
   }
   .carousel-indicators li.active {
-      background-color: #f4511e;
+      background-color: #F6F6F6;
   }
   .item h4 {
       font-size: 19px;
