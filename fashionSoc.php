@@ -84,7 +84,7 @@ a:hover {
   .carousel-indicators li.active {
       background-color: #F6F6F6;
   }
-  
+
   
 a:hover{
 	color: rgb(119, 119, 119);
@@ -167,35 +167,28 @@ button:focus {outline:0;}
     
     <div class="container">
         <div class="jumbotron">
-            <h1>International Society</h1>
+            <h1>Fashion Society</h1>
         </div>
     </div>
     
     <div class="container ">
     	<div class="row">
     		<div class="col-md-7">
-    			<img  src="images/international.jpg" class="imgStyle" height="350px" width="100%"></img>
+    			<img  src="images/FashionSoc/fashionSoc.jpg" class="imgStyle" height="350px" width="100%"></img>
     			<div class="descriptionText text-center">
-    				<div class="col-sm-6 textSpace">
-    					<h3>President</h3><p>Franciele Firmo Da Silva</p>
-    				</div>
-    				<div class="col-sm-6 textSpace">
-    					<h3>Vice-President</h3><p>Shilpika Kotina</p>
+    				<div class="col-sm-12 textSpace">
+    					<h3>President</h3><p>Sarah Mustong</p>
     				</div>
     			</div>
     		</div>
     		<div class="col-md-5">
     			<h3>ABOUT</h3>
-    			<p>Aims to promote integration between 
-    			the International and local students of National College of 
-    			Ireland through meet ups, day trips and other activities.</p>
+    			<p>National College of Ireland's official fashion society</p>
     			<hr>
     			<h3>STORY</h3>
     			<p>It doesn't matter whether you are a local or an 
-    			international student,if you have an interest in meeting new people from different cultures and backgrounds, this is the club for you. 
-				We aim to promote communication between all students.
-				We will be organising day trips, meet ups, celebrate International 
-				festivals as well as other activities. So why don't you come on board and make NCI experience the best of your life?</p>
+    			international student,if you have an interest in fashion and love to express your personality through clothes then NCI Fashion Soc. 
+    			is the pace to be in. Be the fashionista and be you. Events from fashion shows to photoshoots.</p>
     		</div>
     	</div>
     	<hr>
@@ -219,25 +212,25 @@ button:focus {outline:0;}
 				    <!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 				    	<div class="item active">
-				      		<img src="images/InternSoc/pic1.png"></img>	
+				      		<img src="images/FashionSoc/fash2.jpg"></img>	
 				      	</div>
 				      	<div class="item">
-				      		<img src="images/InternSoc/pic2.png"></img>	
+				      		<img src="images/FashionSoc/fash3.jpg"></img>
 				      	</div>
 				      	<div class="item">
-				      		<img src="images/InternSoc/pic3.png"></img>	
+				      		<img src="images/FashionSoc/fash4.jpg"></img>
 				      	</div>
 				      	<div class="item">
-				      		<img src="images/InternSoc/pic4.png"></img>	
+				      		<img src="images/FashionSoc/fash5.jpg"></img>
 				      	</div>
 				      	<div class="item">
-				      		<img src="images/InternSoc/pic5.png"></img>	
+				      		<img src="images/FashionSoc/fash6.jpg"></img>	
 				      	</div>
 				      	<div class="item">
-				      		<img src="images/InternSoc/pic6.jpg"></img>	
+				      		<img src="images/FashionSoc/fash7.jpg"></img>
 				      	</div>
 				      	<div class="item">
-				      		<img src="images/InternSoc/pic7.png"></img>	
+				      		<img src="images/FashionSoc/fash1.jpg"></img>
 				      	</div>
 				    </div>
 				

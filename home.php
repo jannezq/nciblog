@@ -1,25 +1,14 @@
-<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
-
 <?php
 
-	session_start();
+include 'db/connect_to_database.php';
 
-	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 
-	
-		{
-			header("Location: login_proccess.php");
-		}
-	
-	if (isset($_POST['username']) && isset($_POST['password']))
-		
-			{
-				if ($_POST['username'] == $username && $_POST['password'] == $password)
-					
-					{
-						$_SESSION['loggedin'] = true;
-						header("Location: login_proccess.php");
-					}
-			}
+session_start();
+
+if(!isset($_SESSION['username'])) { //if not yet logged in
+   header("Location: login_page.php");// send to login page
+   exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -44,14 +33,26 @@
   	
 	<meta charset="utf-8">
 	
-	<title>Hello...</title>
+	<title>Student Globe</title>
 <style type="text/css">
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 
 body {
     font-family: 'Quicksand', sans-serif;
     font-weight:700;
+   
 }
+
+.jumbotron{
+    background-color:#337ab7;
+    color: #ffffff;
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+    height: 250px;
+}
+
+
+
 
 .carousel-control.right, .carousel-control.left {
       background-image: none;
@@ -63,6 +64,56 @@ body {
   .carousel-indicators li.active {
       background-color: #016DBA;
   }
+  
+
+  
+a:hover{
+	color: rgb(119, 119, 119);
+}
+  
+button{
+	background-color: #f8f8f8;
+	
+}
+
+button:focus {outline:0;}
+  
+.dropbtn {
+	color: rgb(119, 119, 119);
+    padding: 16px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+   	color: rgb(119, 119, 119);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 
 
 </style> 
@@ -78,11 +129,19 @@ body {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="home.php">Student Globe</a>
+				<a class="navbar-brand" href="home.php">StudentGlobe</a>
 			</div>
 			<div id="home" class="collapse navbar-collapse" id="NavigationBar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="home.php">Home</a></li>
+					<!--<li><a href="">Hello <?php  echo $_SESSION["username"];  ?></a></li>-->
+					<li><div class="dropdown dropMenu">
+						    <button class="dropbtn">Hello <?php  echo $_SESSION["username"];  ?></button>
+						    <div class="dropdown-content">
+						      <a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
+						      <a href="logout.php">Logout</a>
+						    </div>
+						</div> 
+					 </li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#forum">Forum</a></li>
 					<li><a href="#events">Events</a></li>
@@ -94,15 +153,17 @@ body {
 		</div>
 	</nav>
 	
-	<div class="container text-center" >
-		<div class="jumbotron">
-			<h1>Welcome to Student Globe NCIRL</h1>
+		
+
+		<div class="jumbotron text-center">
+			<h1>Welcome to Student Globe NCIRL </h1>
+			<h1><?php  echo $_SESSION["username"];  ?></h1>
 		</div>
-	</div>
+
 	
 	
 	
-	<!-- Login Section -->
+	<!-- Login Section 
 	<section class="bg-primary">
 	<div class="container">
     	<div class="row">
@@ -119,11 +180,11 @@ body {
 						</div>
 						<hr>
 					</div>
-				<!--Login form-->
+				<!--Login form
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" method="post" role="form" style="display: block;">
+								<form action = "login_proccess.php" id="login-form" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -151,7 +212,7 @@ body {
 										</div>
 									</div>
 								</form>
-							<!--Signup form-->
+							<!--Signup form
 								<form id="register-form" action="signup.php" method="post" role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="fname" id="fname" tabindex="1" class="form-control" placeholder="First Name" value="">
@@ -175,7 +236,7 @@ body {
 									<!--<div class="form-group">
 										<input type="password" name="confirm-password" id="password2" tabindex="2" minlength="8" maxlength="16" class="form-control" placeholder="Confirm Password" onkeyup"checkPass(); return false;" />
 										<span id="confirmMessage" class="confirmMessage"></span>
-									</div>-->
+									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
@@ -191,35 +252,36 @@ body {
 			</div>
 		</div>
 	</div>
-	</section>
+	</section>-->
 	
 	<!-- About Section -->
 	<div class=" container container-fluid text-center" id="about">
 		<div class="row ">
-			<div class="col-md-5  slideanim">
+			<div class="col-md-5  ">
 				<img id="logo" src="images/globe.png"></img>
 			</div>
 			<div class="col-md-7 text-center">
 				<h1>About Student Globe</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-				ut aliquip ex ea commodo consequat.</p>
+				<p>Student Globe is your go to hub of information. From 
+				Clubs and Society events to forums. Discuss various topics
+				from news to sports to interest&hobbies. A hub of communitcation between
+			lecturers and students. Check the events to see what is happening around you.</p>
 			</div>
 		</div>
 	</div>
 	
 	<!-- Forum Section https://bootsnipp.com/snippets/NBMD6-->
-	<section class="jk-slider" id="forum" >
+	<section class="jk-slider " id="forum" >
 		<hr>
 	    <div class="container dad">
 		  <div class="son-1">
 		  </div>
-		    <a  href="addpost.php" style="text-decoration:none;"><p class="son-text"><span class="son-span">Forums</span><br/><br/>Created by the students for the students! </p></a>
+		    <a  href="forum.php" style="text-decoration:none;"><p class="son-text"><span class="son-span">Forums</span><br/><br/>Created by the students for the students! </p></a>
 		</div>
 	</section>
 	
 	<!-- Events Section https://bootsnipp.com/snippets/K3xDx -->
-		<div class="container container-fluid" id="events">
+		<div class="container container-fluid slideanim" id="events">
 			<h1 class="text-center">Events</h1>
 			<hr>
 			<div class="row">
@@ -227,7 +289,7 @@ body {
 		          <div class="row story-hover">
 		            <div class="col-sm-4 col-md-4">
 		              <div class="story">
-		                <a class="over" href="eventsMain.php">
+		                <a class="over" href="event1.php">
 		                  <span class="story-content">
 		                    <i class="fa fa-users" aria-hidden="true"></i><br>
 		                    Freshers Week
@@ -239,10 +301,10 @@ body {
 		
 		            <div class="col-sm-4 col-md-4">
 		              <div class="story">
-		                <a class="over" href="#">
+		                <a class="over" href="event2.php">
 		                  <span class="story-content">
-		                    <i class="fa fa-camera" aria-hidden="true"></i><br>
-		                    Digital
+		                    <i class="fa fa-star-o" aria-hidden="true"></i><br>
+		                    Lantern Festival
 		                  </span>
 		                  <img src="images/event2.png" class="img-responsive" >
 		                </a>
@@ -253,8 +315,8 @@ body {
 		              <div class="story">
 		                <a class="over" href="#">
 		                  <span class="story-content">
-		                    <i class="fa fa-laptop" aria-hidden="true"></i><br>
-		                    Responsive
+		                    <i class="fa fa-id-badge" aria-hidden="true"></i><br>
+		                    Jobs Career Fair
 		                  </span>
 		                  <img src="images/event3.png" class="img-responsive">
 		                </a>
@@ -273,7 +335,7 @@ body {
 		                <a class="over" href="eventsMain.php">
 		                  <span class="story-content">
 		                    <i class="fa fa-users" aria-hidden="true"></i><br>
-		                    Freshers Week
+		                    CV Clinic
 		                  </span>
 		                  <img src="images/event1.png" class="img-responsive" >
 		                </a>
@@ -285,7 +347,7 @@ body {
 		                <a class="over" href="#">
 		                  <span class="story-content">
 		                    <i class="fa fa-camera" aria-hidden="true"></i><br>
-		                    Digital
+		                    Essay Workshop
 		                  </span>
 		                  <img src="images/event2.png" class="img-responsive" >
 		                </a>
@@ -297,7 +359,7 @@ body {
 		                <a class="over" href="#">
 		                  <span class="story-content">
 		                    <i class="fa fa-laptop" aria-hidden="true"></i><br>
-		                    Responsive
+		                    Fashion Show 2016
 		                  </span>
 		                  <img src="images/event3.png" class="img-responsive">
 		                </a>
@@ -321,23 +383,24 @@ body {
 		            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 		            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 		            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
 		        </ol>
 		        <!-- Wrapper for slides -->
 		        <div class="carousel-inner" role="listbox">
 		            <!-- Item 1 -->
 		            <div class="item active slide1">
-		                <a href="InternSoc.php">
+		                
 		                	<div class="row">
 		                		<div class="container">
 		                    		<div class="col-md-3 text-right">
-		                       			<!-- <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/pfmmo6qj1/window_domain.png"> -->
+		                       			<!-- <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/sp11uneml/rack_server_unlock.png"> -->
 		                    		</div>
 		                    		<div class="col-md-9 text-right">
-		                        		<h3 data-animation="animated bounceInDown">International Society</h3>
+		                        		<h3 data-animation="animated bounceInDown">Basketball Club</h3>
 		                     		</div>
 		                		</div>
 		                	</div>
-		                </a>
+		               
 		             </div> 
 		            <!-- Item 2 -->
 		            <div class="item slide2">
@@ -363,17 +426,38 @@ body {
 		            </div>
 		            <!-- Item 4 -->
 		            <div class="item slide4">
-		                <div class="row"><div class="container">
-		                    <div class="col-md-7 text-left">
-		                        <h3 data-animation="animated bounceInDown">Fashion Society</h3>
-		                     </div>
-		                    <div class="col-md-5 text-right">
-		                        <!--<img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/9vf8xngel/internet_speed.png">-->
-		                    </div>  
-		                </div></div>
+		            	<a href="fashionSoc.php">
+			                <div class="row">
+			                	<div class="container">
+				                    <div class="col-md-7 text-left">
+				                        <h3 data-animation="animated bounceInDown">Fashion Society</h3>
+				                     </div>
+				                    <div class="col-md-5 text-right">
+				                        <!--<img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/9vf8xngel/internet_speed.png">-->
+				                    </div>  
+			                	</div>
+			                </div>
+		                </a>
 		            </div>
 		            <!-- End Item 4 -->
-		    
+		    		
+		    		<!-- Item 5 -->
+		            <div class="item slide5">
+		            	<a href="InternSoc.php">
+			                <div class="row">
+			                	<div class="container">
+				                    <div class="col-md-5 text-right">
+				                        <!--<img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/9vf8xngel/internet_speed.png">-->
+				                    </div>  
+				                    <div class="col-md-7 text-left">
+				                        <h3 data-animation="animated bounceInDown">International Society</h3>
+				                     </div>
+			                	</div>
+			                </div>
+		                </a>
+		            </div>
+		            <!-- End Item 5 -->
+		    		
 		        </div>
 		        <!-- End Wrapper for slides-->
 		        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -392,7 +476,7 @@ body {
 		<h1 class=" text-center">Quiz</h1>
 		<div class="row ">
 			<div class="col-md-7 slideanim">
-				<h4>Do you have what it takes to take on the weekly challenge. Get all Right win a Prize. Challenge accepted? <a href="GameQuiz.html">Click here now</a></h4>
+				<h4>Do you have what it takes to take on the weekly challenge. Get all Right win a Prize. Challenge accepted? <a href="GameQuiz.php">Click here now</a></h4>
 			</div>
 			<div class="col-md-5  slideanim">
 				<img id="logo" src="images/globe.png"></img>
@@ -415,6 +499,9 @@ body {
 		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		      <li data-target="#myCarousel" data-slide-to="1"></li>
 		      <li data-target="#myCarousel" data-slide-to="2"></li>
+		      <li data-target="#myCarousel" data-slide-to="3"></li>
+		      <li data-target="#myCarousel" data-slide-to="4"></li>
+		      <li data-target="#myCarousel" data-slide-to="5"></li>
 		    </ol>
 		
 		    <!-- Wrapper for slides -->
@@ -427,6 +514,15 @@ body {
 		      </div>
 		      <div class="item">
 		        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+		      </div>
+		      <div class="item">
+		        <h4>"The only necessity for success is the willingness to suffer a thousand failures!"<br><span></span></h4>
+		      </div>
+		      <div class="item">
+		        <h4>"Learn not just from what winners do right, but also from what losers do wrong."<br><span></span></h4>
+		      </div>
+		      <div class="item">
+		        <h4>"100% of the time, it works every time."<br><span></span></h4>
 		      </div>
 		    </div>
 		

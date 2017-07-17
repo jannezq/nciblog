@@ -9,6 +9,24 @@ if(!isset($_SESSION['username'])) { //if not yet logged in
    exit;
 }
 
+if(isset($_POST['submit'])){
+    $title = $_POST['title'];
+    $summary = $_POST['summary'];
+    $author = $_POST['author'];
+    $category = $_POST['category'];
+    $content = $_POST['content'];
+
+    
+    $sql = $conn->query("INSERT INTO posts VALUES('', '$title', '$summary', '$author', '$category', '$content')");
+    
+   
+
+
+    
+    header('Location: addpost.php');
+    exit();
+}
+
 ?>
 
 <!--
@@ -21,12 +39,9 @@ if(!isset($_SESSION['username'])) { //if not yet logged in
 <head>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/forumCss.css">
-	<link rel="stylesheet" href="css/slidercss.css">
-	<link rel="stylesheet" href="css/eventscss.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="css/eventslayout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     
     
     
@@ -59,32 +74,14 @@ a {
 }
 a:hover {
     color: #043189;
+      text-decoration: none;
 }
 
 .navbar{
 	font-family: 'Quicksand', sans-serif;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
-.imgStyle{
-	border-radius: 8px;
-}
-
-.textSpace{
-	padding-top:5px;
-}
-
-.carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #F6F6F6;
-  }
-  .carousel-indicators li {
-      border-color: #F6F6F6;
-  }
-  .carousel-indicators li.active {
-      background-color: #F6F6F6;
-  }
-  
   
 a:hover{
 	color: rgb(119, 119, 119);
@@ -131,6 +128,9 @@ button:focus {outline:0;}
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+
 </style>
 </head>
 
@@ -151,15 +151,15 @@ button:focus {outline:0;}
                     <li><div class="dropdown dropMenu">
 						    <button class="dropbtn">Hello <?php  echo $_SESSION["username"];  ?></button>
 						    <div class="dropdown-content">
-						      <a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
-						      <a href="logout.php">Logout</a>
+						   		<a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
+						   		<a href="logout.php">Logout</a>
 						    </div>
 						</div> 
 					 </li>
 					<li><a href="../forum.php">Forum</a></li>
 					<li><a href="../EventsMain.php">Events</a></li>
 					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
-					<li><a href="../GameQuiz.php">Quiz</a></li>
+					<li><a href="../GameQuiz.html">Quiz</a></li>
                 </ul>
             </div>
         </div>
@@ -167,102 +167,121 @@ button:focus {outline:0;}
     
     <div class="container">
         <div class="jumbotron">
-            <h1>International Society</h1>
+            <h1>Freshers Week!</h1>
         </div>
     </div>
     
-    <div class="container ">
-    	<div class="row">
-    		<div class="col-md-7">
-    			<img  src="images/international.jpg" class="imgStyle" height="350px" width="100%"></img>
-    			<div class="descriptionText text-center">
-    				<div class="col-sm-6 textSpace">
-    					<h3>President</h3><p>Franciele Firmo Da Silva</p>
-    				</div>
-    				<div class="col-sm-6 textSpace">
-    					<h3>Vice-President</h3><p>Shilpika Kotina</p>
-    				</div>
-    			</div>
-    		</div>
-    		<div class="col-md-5">
-    			<h3>ABOUT</h3>
-    			<p>Aims to promote integration between 
-    			the International and local students of National College of 
-    			Ireland through meet ups, day trips and other activities.</p>
-    			<hr>
-    			<h3>STORY</h3>
-    			<p>It doesn't matter whether you are a local or an 
-    			international student,if you have an interest in meeting new people from different cultures and backgrounds, this is the club for you. 
-				We aim to promote communication between all students.
-				We will be organising day trips, meet ups, celebrate International 
-				festivals as well as other activities. So why don't you come on board and make NCI experience the best of your life?</p>
-    		</div>
-    	</div>
-    	<hr>
-    	<div class="row">
-    		<h2 class="text-center">Gallery</h2>
-    		<hr>
-    		<div class="col-md-12">
-    			<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-				    <!-- Indicators -->
-					<ol class="carousel-indicators">
-				    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				      	<li data-target="#myCarousel" data-slide-to="1"></li>
-				      	<li data-target="#myCarousel" data-slide-to="2"></li>
-				      	<li data-target="#myCarousel" data-slide-to="3"></li>
-				      	<li data-target="#myCarousel" data-slide-to="4"></li>
-				      	<li data-target="#myCarousel" data-slide-to="5"></li>
-				      	<li data-target="#myCarousel" data-slide-to="6"></li>
-				      	
-				    </ol>
-				
-				    <!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-				    	<div class="item active">
-				      		<img src="images/InternSoc/pic1.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic2.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic3.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic4.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic5.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic6.jpg"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic7.png"></img>	
-				      	</div>
-				    </div>
-				
-				    <!-- Left and right controls -->
-				    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				      <span class="sr-only">Previous</span>
-				    </a>
-				    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				      <span class="sr-only">Next</span>
-				    </a>
-				 </div>
-			</div>
-    	</div>
-    </div>
-    
-   
-    
+
+    <!-- https://bootsnipp.com/snippets/kER43 -->
+<div class="container">
+	<div class="content bg-blue">
+	    <div class="bounds padding">
+	                <a  class="item active">
+	        	        <div class="column ">
+					        <div class="image">					        
+	                            <img id="ctl00_body_rptProducts_ctl00_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products1.jpg" alt="antimicrobial alphasan additive prevents odors" />
+								<div class="link-abs">
+									<h2 class="link-col-text">Monday</h2>
+								</div>
+					        </div>
+				        </div>
+				        <div class="column">
+					        <div class="text">
+					        	-Comedy show featuring: Andrew Stanley, Marcus O'Laire, Foil arms and Hog.</br>
+					        	-PRE SESH, SU 7pm</br>
+								-The Workmans. Tickets 10.00 Door @10.30pm</br>
+								-FRESHERS BALL feature Balgans, Gavin James, ROry Lynam with live SAX		
+					        </div>
+				        </div>
+			        </a>
+	            
+	                <a  class="item active">
+				        <div class="column">
+					         <div class="image">
+	                            <img id="ctl00_body_rptProducts_ctl01_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products2.jpg" alt="Dispersitech Pigment Dispersion" />
+								<div class="link-abs">
+									<h2 class="link-col-text">Tuesday</h2>
+								</div>
+					        </div>
+				        </div>
+				        <div class="column">
+				        	<div class="text">
+					        	-Clubs & Socs Sign Up Day.</br>
+								-Sponsor by Redbull, SPIN103.8</br>
+								-Giant Infatables & free goodies!</br>
+								-Pub Crawl 5.00 & free t-shirt, Lagoona @4pm.	
+					        </div>
+				        </div>
+			        </a>
+	            
+	                <a  class="item active">
+	        	        <div class="column ">
+					        <div class="image">					        
+	                            <img id="ctl00_body_rptProducts_ctl00_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products1.jpg" alt="antimicrobial alphasan additive prevents odors" />
+								<div class="link-abs">
+									<h2 class="link-col-text">Wednesday</h2>
+								</div>
+					        </div>
+				        </div>
+				        <div class="column">
+					        <div class="text">
+						        <div class="text">
+					        	-Nando's, Atrium @ 11am</br>
+								-Jump! Zone 5.00, tickets at atrium @1:30pm.	
+					        </div>	
+					        </div>
+				        </div>
+			        </a>
+	            
+	            
+	                <a  class="item active">
+				        <div class="column">
+					         <div class="image">
+	                            <img id="ctl00_body_rptProducts_ctl01_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products2.jpg" alt="Dispersitech Pigment Dispersion" />
+								<div class="link-abs">
+									<h2 class="link-col-text">Thursday</h2>
+								</div>
+					        </div>
+				        </div>
+				        <div class="column">
+					        <div class="text">
+					        	-Comedy show featuring: Andrew Stanley, Marcus O'Laire, Foil arms and Hog.</br>
+					        	-PRE SESH, SU 7pm</br>
+								-The Workmans. Tickets 10.00 Door @10.30pm</br>
+								-FRESHERS BALL feature Balgans, Gavin James, ROry Lynam with live SAX		
+					        </div>
+				        </div>
+			        </a>
+			        
+	                <a  class="item active">
+	        	        <div class="column ">
+					        <div class="image">					        
+	                            <img id="ctl00_body_rptProducts_ctl00_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products1.jpg" alt="antimicrobial alphasan additive prevents odors" />
+								<div class="link-abs">
+									<h2 class="link-col-text">Friday</h2>
+								</div>
+					        </div>
+				        </div>
+				        <div class="column">
+					        <div class="text">
+						       <div class="text">
+					        	-Comedy show featuring: Andrew Stanley, Marcus O'Laire, Foil arms and Hog.</br>
+					        	-PRE SESH, SU 7pm</br>
+								-The Workmans. Tickets 10.00 Door @10.30pm</br>
+								-FRESHERS BALL feature Balgans, Gavin James, ROry Lynam with live SAX		
+					        </div>	
+					        </div>
+				        </div>
+			        </a> 
+		</div>
+	</div>
+</div>
 
     <!-- Container (Contact Section) -->
 	<div id="contact" class="container container-fluid bg-grey contacting">
 	  <h1 class="text-center">CONTACT</h1>
 	  <hr>
-	  <div class="col-md-12  text-center">
+	  <div class="col-md-12 slideanim text-center">
 	      <div class="row">
 	        <div class="col-sm-6 form-group">
 	          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>

@@ -23,14 +23,14 @@ body {
 }
 
 
-#first-slider .slide1 h3, #first-slider .slide2 h3, #first-slider .slide3 h3, #first-slider .slide4 h3{
+#first-slider .slide1 h3, #first-slider .slide2 h3, #first-slider .slide3 h3, #first-slider .slide4 h3, #first-slider .slide5 h3{
     color: #fff;
     font-size: 30px;
       text-transform: uppercase;
       font-weight:700;
 }
 
-#first-slider .slide1 h4,#first-slider .slide2 h4,#first-slider .slide3 h4,#first-slider .slide4 h4{
+#first-slider .slide1 h4,#first-slider .slide2 h4,#first-slider .slide3 h4,#first-slider .slide4 h4,#first-slider .slide5 h4{
     color: #fff;
     font-size: 30px;
       text-transform: uppercase;
@@ -178,15 +178,17 @@ body {
 /*       Slides backgrounds     */
 /********************************/
 #first-slider .slide1 {
-    background-image: url(../images/basketball.jpg);
+  background-image: url(../images/basketball.jpg);
       background-size: cover;
     background-repeat: no-repeat;
+  
 }
 #first-slider .slide2 {
   background-image: url(../images/gaming.png);
       background-size: cover;
     background-repeat: no-repeat;
 }
+
 #first-slider .slide3 {
   background-image: url(../images/badminton.jpg);
       background-size: cover;
@@ -196,6 +198,13 @@ body {
   background-image: url(../images/fashion.jpg);
       background-size: cover;
     background-repeat: no-repeat;
+}
+
+#first-slider .slide5{
+  background-image: url(../images/flag.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 

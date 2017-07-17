@@ -9,6 +9,24 @@ if(!isset($_SESSION['username'])) { //if not yet logged in
    exit;
 }
 
+if(isset($_POST['submit'])){
+    $title = $_POST['title'];
+    $summary = $_POST['summary'];
+    $author = $_POST['author'];
+    $category = $_POST['category'];
+    $content = $_POST['content'];
+
+    
+    $sql = $conn->query("INSERT INTO posts VALUES('', '$title', '$summary', '$author', '$category', '$content')");
+    
+   
+
+
+    
+    header('Location: addpost.php');
+    exit();
+}
+
 ?>
 
 <!--
@@ -21,12 +39,9 @@ if(!isset($_SESSION['username'])) { //if not yet logged in
 <head>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/forumCss.css">
-	<link rel="stylesheet" href="css/slidercss.css">
-	<link rel="stylesheet" href="css/eventscss.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="css/eventslayout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     
     
     
@@ -52,39 +67,20 @@ body {
 }
 
 a {
+    padding-top: 5px;
     color: #043189;
     text-decoration: none;
-    
-    cursor: hand
 }
 a:hover {
     color: #043189;
+      text-decoration: none;
 }
 
 .navbar{
 	font-family: 'Quicksand', sans-serif;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
-.imgStyle{
-	border-radius: 8px;
-}
-
-.textSpace{
-	padding-top:5px;
-}
-
-.carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #F6F6F6;
-  }
-  .carousel-indicators li {
-      border-color: #F6F6F6;
-  }
-  .carousel-indicators li.active {
-      background-color: #F6F6F6;
-  }
-  
   
 a:hover{
 	color: rgb(119, 119, 119);
@@ -131,6 +127,8 @@ button:focus {outline:0;}
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
 </style>
 </head>
 
@@ -151,15 +149,15 @@ button:focus {outline:0;}
                     <li><div class="dropdown dropMenu">
 						    <button class="dropbtn">Hello <?php  echo $_SESSION["username"];  ?></button>
 						    <div class="dropdown-content">
-						      <a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
-						      <a href="logout.php">Logout</a>
+						        <a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
+				                <a href="logout.php">Logout</a>
 						    </div>
 						</div> 
 					 </li>
 					<li><a href="../forum.php">Forum</a></li>
 					<li><a href="../EventsMain.php">Events</a></li>
 					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
-					<li><a href="../GameQuiz.php">Quiz</a></li>
+					<li><a href="../GameQuiz.html">Quiz</a></li>
                 </ul>
             </div>
         </div>
@@ -167,96 +165,66 @@ button:focus {outline:0;}
     
     <div class="container">
         <div class="jumbotron">
-            <h1>International Society</h1>
+            <h1>Magic Lantern Festival!</h1>
         </div>
     </div>
     
     <div class="container ">
     	<div class="row">
-    		<div class="col-md-7">
-    			<img  src="images/international.jpg" class="imgStyle" height="350px" width="100%"></img>
+    		<div class="col-md-5">
+    			<img  src="images/eventLantern/event2prof.png" class="imgStyle" height="480px" width="100%"></img>
     			<div class="descriptionText text-center">
     				<div class="col-sm-6 textSpace">
-    					<h3>President</h3><p>Franciele Firmo Da Silva</p>
+    					<a href=""><h3>Facebook</h3></a>
     				</div>
     				<div class="col-sm-6 textSpace">
-    					<h3>Vice-President</h3><p>Shilpika Kotina</p>
+    					<a href=""><h3>Twitter</h3></a>
+    				</div>
+    				<div class="col-sm-12 text-center">
+    				    <a href=""><h3>Instagram</h3></a>
     				</div>
     			</div>
     		</div>
-    		<div class="col-md-5">
-    			<h3>ABOUT</h3>
-    			<p>Aims to promote integration between 
-    			the International and local students of National College of 
-    			Ireland through meet ups, day trips and other activities.</p>
-    			<hr>
+    		<div class="col-md-7">
     			<h3>STORY</h3>
-    			<p>It doesn't matter whether you are a local or an 
-    			international student,if you have an interest in meeting new people from different cultures and backgrounds, this is the club for you. 
-				We aim to promote communication between all students.
-				We will be organising day trips, meet ups, celebrate International 
-				festivals as well as other activities. So why don't you come on board and make NCI experience the best of your life?</p>
+    			<p>The Magical Lantern Festival London is a spectacular fusion of art, heritage and culture. Illuminating outdoor installations of beautifully sculpted lanterns taking various forms.
+</br>
+</br>
+The festival has entered its second year in London as the UK prepares to celebrate Chinese New Year of the Rooster 2017 and the cultural significance surrounding this extraordinary event. The theme for this year’s festival is: ‘Explore The Silk Road’. Visitors will discover magnificent life-sized and oversized lantern scenes, which represent and highlight this significant route of trade and culture from Europe to Ancient China.
+</br>
+</br>
+The Silk Road Festival journey begins with a 15-metre wide lantern of London’s Houses of Parliament. Visitors continue their tour by exploring lanterns related to the Silk Road representing Europe, Central Asia, Arabia, Egypt, Persia, India and Ancient China.
+</br>
+</br>
+The entertainment area adds another dimension to the experience with an international range of food and beverage vendors, festival merchandise, a fully equipped synthetic ice-rink, an authentic ice bar, virtual reality gaming experience and a mini funfair and games.</p>
     		</div>
     	</div>
-    	<hr>
-    	<div class="row">
-    		<h2 class="text-center">Gallery</h2>
     		<hr>
-    		<div class="col-md-12">
-    			<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-				    <!-- Indicators -->
-					<ol class="carousel-indicators">
-				    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				      	<li data-target="#myCarousel" data-slide-to="1"></li>
-				      	<li data-target="#myCarousel" data-slide-to="2"></li>
-				      	<li data-target="#myCarousel" data-slide-to="3"></li>
-				      	<li data-target="#myCarousel" data-slide-to="4"></li>
-				      	<li data-target="#myCarousel" data-slide-to="5"></li>
-				      	<li data-target="#myCarousel" data-slide-to="6"></li>
-				      	
-				    </ol>
-				
-				    <!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-				    	<div class="item active">
-				      		<img src="images/InternSoc/pic1.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic2.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic3.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic4.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic5.png"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic6.jpg"></img>	
-				      	</div>
-				      	<div class="item">
-				      		<img src="images/InternSoc/pic7.png"></img>	
-				      	</div>
-				    </div>
-				
-				    <!-- Left and right controls -->
-				    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				      <span class="sr-only">Previous</span>
-				    </a>
-				    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				      <span class="sr-only">Next</span>
-				    </a>
-				 </div>
-			</div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6">
+    				<h3>Tickets</h3>
+    			<p>Open Thursday to Sunday each week and open every day during the Feb half term holiday week. Last day of opening is 26th Feb. 
+				</br>
+				If customers have tickets for the ice rink, ice bar or VR experience before their lantern tour, then they must enter the entertainment area first which is through the small A4 car park entrance. Then once their activity is over they can walk back through the car park, turn right and enter the lantern route through the Lantern archway through the Dukes Avenue Gate.
+				</br>
+				If customers are going to the lantern tour first then they should enter through the giant lantern archway through the Dukes Avenue Gate. Then at the end of the lantern route visitors will naturally end up at the entertainment area where they can try out the activities and grab a bite to eat before they leave.
+				</br>
+				Please Note: Tickets are non-refundable and non-exchangeable. Children aged 3 and under enter free and do not need a ticket. There are no cloakroom facilities at the venue, so visitors will not be able to store bags or large items. Scooters, skates and bicycles are not permitted on site. Only guide dogs are permitted at the festival.</p>
+				</div>
+    			<div class="col-md-6">
+    				<h3>Win 2 tickets to go!</h3>
+    				<p>For a chance to win 2 tickets for you and your partner all you need to do is: </br>
+    				> Below in the CONTACT form, enter your details and just submit.</br>
+    				> Like the MAGIC LANTERN FESTIVAL FACEBOOK and other social media accounts.</br>
+    				> Like and Tag your special other to go with you on the the profile picture. 
+    				</p>
+    			</div>
+    		</div>
     	</div>
-    </div>
     
+
    
-    
 
     <!-- Container (Contact Section) -->
 	<div id="contact" class="container container-fluid bg-grey contacting">
