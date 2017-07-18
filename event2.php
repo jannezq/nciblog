@@ -218,7 +218,7 @@ The entertainment area adds another dimension to the experience with an internat
     				<p>For a chance to win 2 tickets for you and your partner all you need to do is: </br>
     				> Below in the CONTACT form, enter your details and just submit.</br>
     				> Like the MAGIC LANTERN FESTIVAL FACEBOOK and other social media accounts.</br>
-    				> Like and Tag your special other to go with you on the the profile picture. 
+    				> Like and Tag your special other to go with you on the the profile picture. !!!!!!!!
     				</p>
     			</div>
     		</div>
