@@ -191,7 +191,7 @@ button:focus {outline:0;}
 					        	-Comedy show featuring: Andrew Stanley, Marcus O'Laire, Foil arms and Hog.</br>
 					        	-PRE SESH, SU 7pm</br>
 								-The Workmans. Tickets 10.00 Door @10.30pm</br>
-								-FRESHERS BALL feature Balgans, Gavin James, ROry Lynam with live SAX		
+								-FRESHERS BALL feature Balgans, Gavin James, Rory Lynam with live SAX!!!!!!!!!!!!		
 					        </div>
 				        </div>
 			        </a>
