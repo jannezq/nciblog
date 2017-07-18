@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     
     $sql = $conn->query("INSERT INTO users VALUES('', '$fname', '$lname', '$username', '$password', '$email')");
     
-    header('Location: signedInHome.php');
+    header('Location: home.php');
     exit();
 }
 

@@ -132,6 +132,7 @@ a:hover{
 					<li><a href="../EventsMain.php">Events</a></li>
 					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
 					<li><a href="../GameQuiz.php">Quiz</a></li>
+					<li><a href="../shop/shop.php">Shop</a></li>
 			</div>
 		</div>
 	</nav>

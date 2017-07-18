@@ -115,8 +115,9 @@ button:focus {outline:0;}
 					 </li>
 					<li><a href="forum.php">Forum</a></li>
 					<li><a href="EventsMain.php">Events</a></li>
-					<li><a href="#clubsnsoc">Clubs & Socs.</a></li>
-					<li><a href="GameQuiz.php">Quiz</a></li>
+					<li><a href="ClubsandSocsMain.php">Clubs & Socs.</a></li>
+					<li><a href="">Quiz</a></li>
+					<li><a href="shop/shop.php">Shop</a></li>
 				</ul>
 			</div>
 		</div>
@@ -133,6 +134,7 @@ button:focus {outline:0;}
 	       <!-- Content Row -->
         <div class="row">
             <!-- Map Column -->
+            <div class="col-md-12">
             <h1> Quiz Game </h1>
                 <form name="quiz" id="formQuiz">
                 <ol>
@@ -200,16 +202,17 @@ button:focus {outline:0;}
                 </ol>
             <div class="container">
                 <div class="row">
-                    <input  type = "button" value = "Welcome" onClick ="sayhello()" />
-                    <input  type = "submit" value = "submit" onClick="checkAll()" />
-                    <input  type = "reset" value = "clear" > </input>
-                    <textarea rows ="20" cols="60" id = "answersBox"> The correct answer will display here</textarea>
-               
+                    <div class="col-md-12">
+                        <input  type = "button" value = "Welcome" onClick ="sayhello()" />
+                        <input  type = "submit" value = "submit" onClick="checkAll()" />
+                        <input  type = "reset" value = "clear" > </input>
+                        <textarea rows ="20" cols="60" id = "answersBox"> The correct answer will display here</textarea>
+                    </div>
                 </div>
             </div>
-             </form>
-        </div>
+        </form>
     </div>
+</div>
 	
 
  <!-- jQuery -->

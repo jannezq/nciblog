@@ -5,12 +5,12 @@ include '../db/connect_to_database.php';
 session_start();
 
 if(!isset($_SESSION['username'])) { //if not yet logged in
-   header("Location: login_page.php");// send to login page
+   header("Location: login.php");// send to login page
    exit;
 }
 
 $username = $_SESSION["username"];
-$sql_display = $conn-> query("SELECT * FROM posts WHERE author = '$username'");
+$sql_display = $conn-> query("SELECT * FROM product WHERE author = '$userinput'");
 
 
 
@@ -18,19 +18,21 @@ $sql_display = $conn-> query("SELECT * FROM posts WHERE author = '$username'");
 
 while ($row = mysqli_fetch_array($sql_display)) {
    
-   $title =  $row["title"];
-   $summary =  $row["summary"];
-   $author =  $row["author"];
-   $category =  $row["category"];
-   $content =  $row["content"];
+   $userinput = "userinput";
+   $name =  $row["name"];
+   $size =  $row["size"];
+   $colour =  $row["colour"];
+   $quantity =  $row["quantity"];
+   $price =  $row["price"];
 
    
    $user .='<tr>';
-   $user .='<td>'.$title.'</td>';
-   $user .='<td>'.$summary.'</td>';
-   $user .='<td>'.$author.'</td>';
-   $user .='<td>'.$category.'</td>';
-   $user .='<td><a href="edit.php?id='.$row['id'].'">Edit</a> | <a href="delete.php?id='.$row['id'].'">Delete</a></td>';
+   $user .='<td>'.$name.'</td>';
+   $user .='<td>'.$size.'</td>';
+   $user .='<td>'.$colour.'</td>';
+   $user .='<td>'.$quantity.'</td>';
+   $user .='<td>'.$price.'</td>';
+   $user .='<td><a href="delete.1.php?id='.$row['id'].'">Cancel Order</a></td>';
 
    $user .='</tr>';
    
@@ -47,11 +49,11 @@ while ($row = mysqli_fetch_array($sql_display)) {
 <html lang="en-us">
 <head>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/categoryCss.css">
-    <link rel="stylesheet" href="../css/slidercss.css">
-    <link rel="stylesheet" href="../css/eventscss.css">
+    <link rel="stylesheet" href="css/categoryCss.css">
+    <link rel="stylesheet" href="css/slidercss.css">
+    <link rel="stylesheet" href="css/eventscss.css">
     
     
     <!-- Latest compiled and minified JavaScript -->
@@ -151,56 +153,18 @@ button:focus {outline:0;}
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-default  navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavigationBar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../home.php">Student Globe</a>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-					<li><div class="dropdown dropMenu">
-						    <button class="dropbtn">Hello <?php  echo $_SESSION["username"];  ?></button>
-						    <div class="dropdown-content">
-						      <a href="admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
-						      <a href="../logout.php">Logout</a>
-						    </div>
-						</div> 
-					 </li>
-					<li><a href="../forum.php">Forum</a></li>
-					<li><a href="../EventsMain.php">Events</a></li>
-					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
-					<li><a href="../GameQuiz.php">Quiz</a></li>
-					<li><a href="../shop.php">Shop</a></li>
-                </ul>
-        </div>
-    </nav>
-    
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-right"><?php  echo $_SESSION["username"];  ?>'s Admin Page</h1>
-        </div>
-    </div>
-    
-    
-    <div class="container">
-        <a href=addpost.php>Add New Post</a>
-        |
-        <a href=vieworders.php>View Orders</a>
-        <hr>
+
+    <input type="text" name="userinput" value="Please enter student username"/>
+
         <div class="table-responsive">
             <thead>
                 <table class="table">
                     <tr>
-                        <th>Title</th>
-                        <th>Summary</th>
-                        <th>Author</th>
-                        <th>Category</th>
-                        <th></th>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Colour</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                         <th></th>
                     </tr>
                 <?php echo $user; ?>

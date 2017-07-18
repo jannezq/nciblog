@@ -157,7 +157,8 @@ button:focus {outline:0;}
 					<li><a href="../forum.php">Forum</a></li>
 					<li><a href="../EventsMain.php">Events</a></li>
 					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
-					<li><a href="../GameQuiz.html">Quiz</a></li>
+					<li><a href="../GameQuiz.php">Quiz</a></li>
+					<li><a href="../shop/shop.php">Shop</a></li>
                 </ul>
             </div>
         </div>

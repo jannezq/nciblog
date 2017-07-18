@@ -15,15 +15,16 @@ if(!isset($_SESSION['username'])) { //if not yet logged in
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/forumCss.css">
-	<link rel="stylesheet" href="css/slidercss.css">
-	<link rel="stylesheet" href="css/eventscss.css">
+	<link rel="stylesheet" href="../css/forumCss.css">
+	<link rel="stylesheet" href="../css/slidercss.css">
+	<link rel="stylesheet" href="../css/eventscss.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
 	
@@ -48,13 +49,13 @@ body {
 }
 
 .jumbotron{
-    background-color:#337ab7;
-    color: #ffffff;
+    background-color:#f8f8f8;
+    border-width: 1px;
+  	border-color:#e7e7e7;
     padding-top: 20px ;
     padding-bottom: 20px ;
     height: 250px;
 }
-
 
 
 
@@ -73,6 +74,7 @@ body {
   
 a:hover{
 	color: rgb(119, 119, 119);
+	text-decoration: none;
 }
   
 button{
@@ -124,7 +126,6 @@ button:focus {outline:0;}
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-	<!-- NAVBAR -->
 	<nav class="navbar navbar-default  navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -146,12 +147,11 @@ button:focus {outline:0;}
 						    </div>
 						</div> 
 					 </li>
-					<li><a href="../home.php">About</a></li>
-					<li><a href="../forum.php">Forum</a></li>
-					<li><a href="../EventsMain.php">Events</a></li>
-					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
-					<li><a href="../GameQuiz.php">Quiz</a></li>
-					<li><a href="../home.php">Contact</a></li>
+					<li><a href="forum.php">Forum</a></li>
+					<li><a href="EventsMain.php">Events</a></li>
+					<li><a href="ClubsandSocsMain.php">Clubs & Socs.</a></li>
+					<li><a href="GameQuiz.php">Quiz</a></li>
+					<li><a href="">Shop</a></li>
 				</ul>
 			</div>
 		</div>
@@ -162,6 +162,163 @@ button:focus {outline:0;}
 			<h1>NCI Store </h1>
 		</div>
  
+ <div class="container">
+  <a href=../admin/vieworders.php>View Orders</a>
+  <br>
+    <div class="row">
+       <div class="col-md-3">
+            <form id="shop" method="post" role="form" style="">
+              <div class="form-group row">
+                  <input type="hidden" type="text" name="author" value="<?php  echo $_SESSION["username"];  ?>" readonly>
+                 <div class="col-sm-6"><input class="text-center" style="border: none; font-size: 18px;" type="text" name="name" value="Sweater" readonly>
+                  <input style="border: none; font-size:18px;" class="text-center" type="number" name="price" value="19.99" readonly> 
+                 <img src="../images/shop/jumper.jpg" height="200" width="200"/>
+                  <div class="col-sm-6">
+                    <label for="inputTitle" class="col-form-label">Size</label>
+                    <select name="size">
+                      <option value="Small">Small</option>
+                      <option value="Mediium">Mediium</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Colour</label>
+                     <select name="colour">
+                      <option value="Red">Red</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Grey">Grey</option><br><br>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Quantity</label>
+                    <input type="number" name="quantity" min="1" max="9">
+                    <br><br>
+                   <input type="submit" value="Add" name="submit">
+                  </div> 
+                 </div>
+              </div>
+            </form>
+       </div>
+       <div class="col-md-3">     
+        <form id="shop" method="post" role="form" style="">
+              <div class="form-group row">
+               <input type="hidden" type="text" name="author" value="<?php  echo $_SESSION["username"];  ?>" readonly>
+                 <div class="col-sm-6">
+                  <input class="text-center" style="border: none; font-size: 18px;" type="text" name="name" value="T-Shirt" readonly>
+                  <input style="border: none; font-size:18px;" class="text-center" type="number" name="price" value="19.99" readonly> 
+                  <img src="../images/shop/tshirt.jpg" height="200" width="200"/>
+                  <div class="col-sm-6">
+                    
+                     <label for="inputTitle" class="col-form-label">Size</label>
+                    <select name="size">
+                      <option value="Small">Small</option>
+                      <option value="Mediium">Mediium</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Colour</label>
+                     <select name="colour">
+                      <option value="Red">Red</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Grey">Grey</option><br><br>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Quantity</label>
+                    <input type="number" name="quantity" min="1" max="9">
+                    <br><br>
+                   <input type="submit" value="Add" name="submit">
+                  </div>
+                 </div>
+              </div>
+              </form> 
+       </div>
+       
+       <div class="col-md-3">     
+        <form id="shop" method="post" role="form" style="">
+              <div class="form-group row">
+                   <input type="hidden" type="text" name="author" value="<?php  echo $_SESSION["username"];  ?>" readonly>
+                 <div class="col-sm-6">
+                   <input  class="text-center" style="border: none; font-size: 18px;" type="text" name="name" value="Jacket" readonly>
+                   <input style="border: none; font-size:18px;" class="text-center" type="number" name="price" value="19.99" readonly> 
+                   <img src="../images/shop/jacket.jpg" height="200" width="200"/>
+                  <div class="col-sm-6">
+                    
+                      <label for="inputTitle" class="col-form-label">Size</label>
+                    <select name="size">
+                      <option value="Small">Small</option>
+                      <option value="Mediium">Mediium</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Colour</label>
+                     <select name="colour">
+                      <option value="Red">Red</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Grey">Grey</option><br><br>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Quantity</label>
+                    <input type="number" name="quantity" min="1" max="9">
+                    <br><br>
+                   <input type="submit" value="Add" name="submit">
+                    
+                  </div>
+                 </div>
+              </div>
+              </form> 
+       </div>
+       
+       <div class="col-md-3">     
+        <form id="shop" method="post" role="form" style="">
+              <div class="form-group row">
+               <input type="hidden" type="text" name="author" value="<?php  echo $_SESSION["username"];  ?>" readonly>
+                 <div class="col-sm-6">
+                  <input class="text-center" style="border: none; font-size: 18px;" type="text" name="name" value="Hat" readonly>
+                  <input style="border: none; font-size:18px;" class="text-center" type="number" name="price" value="19.99" readonly> 
+                  
+                  <img src="../images/shop/hat.jpg" height="200" width="200"/>
+                  <div class="col-sm-6">
+                     <label for="inputTitle" class="col-form-label">Size</label>
+                    <select name="size">
+                      <option value="Small">Small</option>
+                      <option value="Mediium">Mediium</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Colour</label>
+                     <select name="colour">
+                      <option value="Red">Red</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Grey">Grey</option><br><br>
+                    </select>
+                    
+                    <label for="inputTitle" class="col-form-label">Quantity</label>
+                    <input type="number" name="quantity" min="1" max="9">
+                    <br><br>
+                   <input type="submit" value="Add" name="submit">
+                  </div>
+                 </div>
+              </div>
+            </form> 
+       </div>
+       
+    </div>
+ </div>
+ <?php
+ 
+ if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $size = $_POST['size'];
+    $colour = $_POST['colour'];
+    $quantity = $_POST['quantity'];
+    $price = $_POST['price'];
+    $author = $_POST['author'];
+
+    $sql = $conn->query("INSERT INTO product VALUES('', '$name', '$size', '$colour', '$quantity', '$price', '$author')");
+    
+   // header('Location: ../admin/vieworders.php');
+    exit();
+}
+ ?>
+ <!--
 <form  id="shop"  method="post" role="form" style="">
 <img src="../images/shop/jumper.jpg" height="100" width="200"></img></br></br>
    <input style="border: none" type="text" name="name" value="Sweater" readonly><br></br>
@@ -291,25 +448,19 @@ button:focus {outline:0;}
   
   <input type="submit" value="Add" name="submit">
 
-</form>
+</form>-->
 
-<?php
 
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $size = $_POST['size'];
-    $colour = $_POST['colour'];
-    $quantity = $_POST['quantity'];
-    $price = $_POST['price'];
-    $author = $_POST['author'];
+	<!-- Footer -->
+	<footer class="container-fluid bg-4 text-center" >
+		<a href="#myPage" title="To Top">
+    		<span></span>
+  		</a>
+  		<p>Bootstrap Theme Made By <strong>Jovellyn Quiapos</strong></p>
+	</footer>
 
-    $sql = $conn->query("INSERT INTO product VALUES('', '$name', '$size', '$colour', '$quantity', '$price', '$author')");
     
-   // header('Location: shop.php');
-    exit();
-}
-
-?>
+    
 
 </body>
 </html>

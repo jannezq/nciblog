@@ -160,6 +160,7 @@ button:focus {outline:0;}
 					<li><a href="../EventsMain.php">Events</a></li>
 					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
 					<li><a href="../GameQuiz.php">Quiz</a></li>
+					<li><a href="../shop/shop.php">Shop</a></li>
                 </ul>
             </div>
         </div>
@@ -189,6 +190,9 @@ button:focus {outline:0;}
     			<p>It doesn't matter whether you are a local or an 
     			international student,if you have an interest in fashion and love to express your personality through clothes then NCI Fashion Soc. 
     			is the pace to be in. Be the fashionista and be you. Events from fashion shows to photoshoots.</p>
+    			
+    			<h3>NCI Merchandise</h3>
+				<p>Check out the merch that are available: <a href="shop/shop.php">Click Here</a></p>
     		</div>
     	</div>
     	<hr>

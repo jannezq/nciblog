@@ -160,6 +160,7 @@ button:focus {outline:0;}
 					<li><a href="../EventsMain.php">Events</a></li>
 					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
 					<li><a href="../GameQuiz.php">Quiz</a></li>
+					<li><a href="../shop/shop.php">Shop</a></li>
                 </ul>
             </div>
         </div>
@@ -196,6 +197,9 @@ button:focus {outline:0;}
 				We aim to promote communication between all students.
 				We will be organising day trips, meet ups, celebrate International 
 				festivals as well as other activities. So why don't you come on board and make NCI experience the best of your life?</p>
+				
+				<h3>NCI Merchandise</h3>
+				<p>Check out the merch that are available: <a href="shop/shop.php">Click Here</a></p>
     		</div>
     	</div>
     	<hr>

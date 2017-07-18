@@ -131,6 +131,7 @@ button:focus {outline:0;}
 					<li><a href="#events">Events</a></li>
 					<li><a href="ClubsandSocsMain.php">Clubs & Socs.</a></li>
 					<li><a href="GameQuiz.php">Quiz</a></li>
+					<li><a href="shop/shop.php">Shop</a></li>
 				</ul>
 			</div>
 		</div>
@@ -149,7 +150,7 @@ button:focus {outline:0;}
         <div class="content">
     		<div class="grid">
     			<figure class="effect-layla">
-    				<img src="images/sports.jpg" alt="img06"/>
+    				<img src="images/event1.jpg" alt="img06"/>
     				<a href="event1.php">
     				<figcaption>
     					<h2>Freshers<span>Week</span></h2>
@@ -157,8 +158,8 @@ button:focus {outline:0;}
     				</a>
     			</figure>
     			<figure class="effect-layla">
-    			    <a href="news_blog.php">
-    				<img src="images/education.jpg" alt="img03"/>
+    			    <a href="event2.php">
+    				<img src="images/event2.jpg" alt="img03"/>
     				<figcaption>
     					<h2><span>Magic</span>Lantern<span>Festival</span></h2>
     				</figcaption>
@@ -173,18 +174,16 @@ button:focus {outline:0;}
         <div class="content">
     		<div class="grid">
     			<figure class="effect-layla">
-    				<img src="images/news.png" alt="img06"/>
-    				<a href="news_blog.php">
+    				<img src="images/event3.png" alt="img06"/>
     				<figcaption>
     					<h2><span>Jobs</span>Career<span>Fair</span></h2>
     				</figcaption>
-    				</a>
     			</figure>
     			<figure class="effect-layla">
-    				<img src="img/3.jpg" alt="img03"/>
+    				<img src="images/cv.jpg" alt="img03"/>
     				<figcaption>
     					<h2>CV<span>Clinic</span></h2>
-    				</figcaption>			
+    				</figcaption>
     			</figure>
     		</div>
         </div>
@@ -194,26 +193,24 @@ button:focus {outline:0;}
         <div class="content">
     		<div class="grid">
     			<figure class="effect-layla">
-    				<img src="images/news.png" alt="img06"/>
-    				<a href="news_blog.php">
+    				<img src="images/essay.jpg" alt="img06"/>
     				<figcaption>
     					<h2>Essay<span>Workshop</span></h2>
     				</figcaption>
-    				</a>
     			</figure>
     			<figure class="effect-layla">
-    				<img src="img/3.jpg" alt="img03"/>
+    				<img src="images/show.jpg" alt="img03"/>
     				<figcaption>
     					<h2><pan>Fashion</pan>Show<span>2017</span></h2>
-    				</figcaption>			
+    				</figcaption>
     			</figure>
     		</div>
         </div>
     </div>
     
-      <hr>
     
     <div id="contact" class=" container ">
+         <hr>
 		<div class="box">
 			<div class="row">
 			  	<div class="col-md-4 ">

@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 
     $sql = $conn->query("INSERT INTO shop VALUES('', '$oNumber', '$name', '$size', '$colour', '$quantity', '$price')");
     
-    header('Location: shop.php');
+    header('Location: ../admin/vieworders.php');
     exit();
 }
 

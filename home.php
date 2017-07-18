@@ -44,8 +44,10 @@ body {
 }
 
 .jumbotron{
-    background-color:#337ab7;
-    color: #ffffff;
+    background-color:#f8f8f8;
+    border-width: 1px;
+  	border-color:#e7e7e7;
+  	
     padding-top: 20px ;
     padding-bottom: 20px ;
     height: 250px;
@@ -147,6 +149,7 @@ button:focus {outline:0;}
 					<li><a href="#events">Events</a></li>
 					<li><a href="#clubsnsoc">Clubs & Socs.</a></li>
 					<li><a href="#GameQuiz">Quiz</a></li>
+					<li><a href="#shop">Shop</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
@@ -257,8 +260,8 @@ button:focus {outline:0;}
 	<!-- About Section -->
 	<div class=" container container-fluid text-center" id="about">
 		<div class="row ">
-			<div class="col-md-5  ">
-				<img id="logo" src="images/globe.png"></img>
+			<div class="col-md-5 slideanim ">
+				<img style="height:100%; width: 100%; "id="logo" src="images/world.png"></img>
 			</div>
 			<div class="col-md-7 text-center">
 				<h1>About Student Globe</h1>
@@ -337,7 +340,7 @@ button:focus {outline:0;}
 		                    <i class="fa fa-users" aria-hidden="true"></i><br>
 		                    CV Clinic
 		                  </span>
-		                  <img src="images/event1.png" class="img-responsive" >
+		                  <img src="images/cv.jpg" class="img-responsive" >
 		                </a>
 		              </div>
 		            </div>
@@ -349,7 +352,7 @@ button:focus {outline:0;}
 		                    <i class="fa fa-camera" aria-hidden="true"></i><br>
 		                    Essay Workshop
 		                  </span>
-		                  <img src="images/event2.png" class="img-responsive" >
+		                  <img src="images/essay.jpg" class="img-responsive" >
 		                </a>
 		              </div>
 		            </div>
@@ -361,7 +364,7 @@ button:focus {outline:0;}
 		                    <i class="fa fa-laptop" aria-hidden="true"></i><br>
 		                    Fashion Show 2016
 		                  </span>
-		                  <img src="images/event3.png" class="img-responsive">
+		                  <img src="images/show.jpg" class="img-responsive">
 		                </a>
 		              </div>
 		            </div>
@@ -475,11 +478,11 @@ button:focus {outline:0;}
 	<div class="container container-fluid text-center" id="GameQuiz">
 		<h1 class=" text-center">Quiz</h1>
 		<div class="row ">
-			<div class="col-md-7 slideanim">
+			<div class="col-md-8 slideanim">
 				<h4>Do you have what it takes to take on the weekly challenge. Get all Right win a Prize. Challenge accepted? <a href="GameQuiz.php">Click here now</a></h4>
 			</div>
-			<div class="col-md-5  slideanim">
-				<img id="logo" src="images/globe.png"></img>
+			<div class="col-md-4  slideanim">
+				<img id="logo" style="height: 100%; width:100%;" src="images/world.png"></img>
 			</div>
 			
 		</div>
@@ -540,12 +543,12 @@ button:focus {outline:0;}
 	</section>
 	
 	<!-- Container (Shop Section) -->
-		<section class="jk-slider " id="forum" >
+		<section class="jk-slider " id="shop" >
 		<hr>
 	    <div class="container dad">
 		  <div class="son-1">
 		  </div>
-		    <a  href="../shop/shop.php" style="text-decoration:none;"><p class="son-text"><span class="son-span">Store</span><br/><br/>Welcome to the NCI store </p></a>
+		    <a href="../shop/shop.php" style="text-decoration:none;"><p class="son-text"><span class="son-span">Store</span><br/><br/>Welcome to the NCI store </p></a>
 		</div>
 	</section>
 	<!-- Container (Contact Section) -->

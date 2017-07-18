@@ -22,11 +22,11 @@ if(!isset($_SESSION['username'])) { //if not yet logged in
 <html lang="en-us">
 <head>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/categoryCss.css">
-    <link rel="stylesheet" href="css/slidercss.css">
-    <link rel="stylesheet" href="css/eventscss.css">
+    <link rel="stylesheet" href="../css/categoryCss.css">
+    <link rel="stylesheet" href="../css/slidercss.css">
+    <link rel="stylesheet" href="../css/eventscss.css">
     
     
     <!-- Latest compiled and minified JavaScript -->
@@ -52,6 +52,7 @@ body {
 
 a:hover{
 	color: rgb(119, 119, 119);
+		text-decoration: none;
 }
   
 button{
@@ -128,7 +129,7 @@ footer {
                    <li><div class="dropdown dropMenu">
 						    <button class="dropbtn">Hello <?php  echo $_SESSION["username"];  ?></button>
 						    <div class="dropdown-content">
-						   		<a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
+						   		<a href="admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
 						   		<a href="../logout.php">Logout</a>
 						    </div>
 						</div> 

@@ -31,7 +31,7 @@ while ($row = mysqli_fetch_array($sql_display)) {
    $user .='<td>'.$colour.'</td>';
    $user .='<td>'.$quantity.'</td>';
    $user .='<td>'.$price.'</td>';
-   $user .='<td><button><a href="delete.1.php?id='.$row['id'].'">Cancel Order</a></button></td>';
+   $user .='<td><a href="delete.1.php?id='.$row['id'].'">Cancel Order</a></td>';
 
    $user .='</tr>';
    
@@ -48,11 +48,11 @@ while ($row = mysqli_fetch_array($sql_display)) {
 <html lang="en-us">
 <head>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/categoryCss.css">
-    <link rel="stylesheet" href="css/slidercss.css">
-    <link rel="stylesheet" href="css/eventscss.css">
+    <link rel="stylesheet" href="../css/categoryCss.css">
+    <link rel="stylesheet" href="../css/slidercss.css">
+    <link rel="stylesheet" href="../css/eventscss.css">
     
     
     <!-- Latest compiled and minified JavaScript -->
@@ -90,6 +90,7 @@ th, td {
   
 a:hover{
 	color: rgb(119, 119, 119);
+		text-decoration: none;
 }
   
 button{
@@ -134,15 +135,6 @@ button:focus {outline:0;}
     display: block;
 }
 
-  footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:70px;   /* Height of the footer */
-   padding-top:20px;
-   background:#337ab7;
-   color: #fff;
-}
 
 
 </style>
@@ -166,7 +158,7 @@ button:focus {outline:0;}
 					<li><div class="dropdown dropMenu">
 						    <button class="dropbtn">Hello <?php  echo $_SESSION["username"];  ?></button>
 						    <div class="dropdown-content">
-						      <a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
+						      <a href="admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
 						      <a href="../logout.php">Logout</a>
 						    </div>
 						</div> 
@@ -187,7 +179,7 @@ button:focus {outline:0;}
     
     
     <div class="container">
-        <a href=admin_page.php><button>Back</button></a>
+        <a href=admin_page.php>Back</a>
         <hr>
         <div class="table-responsive">
             <thead>
@@ -207,7 +199,8 @@ button:focus {outline:0;}
         </div>
     </div>      
     
- 
+    
+ <br>
   
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center" >

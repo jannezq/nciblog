@@ -159,7 +159,8 @@ button:focus {outline:0;}
 					<li><a href="../forum.php">Forum</a></li>
 					<li><a href="../EventsMain.php">Events</a></li>
 					<li><a href="../ClubsandSocsMain.php">Clubs & Socs.</a></li>
-					<li><a href="../GameQuiz.html">Quiz</a></li>
+					<li><a href="../GameQuiz.php">Quiz</a></li>
+					<li><a href="../shop/shop.php">Shop</a></li>
                 </ul>
             </div>
         </div>
@@ -179,7 +180,7 @@ button:focus {outline:0;}
 	                <a  class="item active">
 	        	        <div class="column ">
 					        <div class="image">					        
-	                            <img id="ctl00_body_rptProducts_ctl00_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products1.jpg" alt="antimicrobial alphasan additive prevents odors" />
+	                            <img  class="cover accelerate" src="images/party.jpg" alt="antimicrobial alphasan additive prevents odors" />
 								<div class="link-abs">
 									<h2 class="link-col-text">Monday</h2>
 								</div>
@@ -198,7 +199,7 @@ button:focus {outline:0;}
 	                <a  class="item active">
 				        <div class="column">
 					         <div class="image">
-	                            <img id="ctl00_body_rptProducts_ctl01_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products2.jpg" alt="Dispersitech Pigment Dispersion" />
+	                            <img class="cover accelerate" src="images/society.jpg" alt="Dispersitech Pigment Dispersion" />
 								<div class="link-abs">
 									<h2 class="link-col-text">Tuesday</h2>
 								</div>
@@ -217,7 +218,7 @@ button:focus {outline:0;}
 	                <a  class="item active">
 	        	        <div class="column ">
 					        <div class="image">					        
-	                            <img id="ctl00_body_rptProducts_ctl00_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products1.jpg" alt="antimicrobial alphasan additive prevents odors" />
+	                            <img class="cover accelerate" src="images/jump.png" alt="antimicrobial alphasan additive prevents odors" />
 								<div class="link-abs">
 									<h2 class="link-col-text">Wednesday</h2>
 								</div>
@@ -237,7 +238,7 @@ button:focus {outline:0;}
 	                <a  class="item active">
 				        <div class="column">
 					         <div class="image">
-	                            <img id="ctl00_body_rptProducts_ctl01_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products2.jpg" alt="Dispersitech Pigment Dispersion" />
+	                            <img  class="cover accelerate" src="images/mystery.jpg" alt="Dispersitech Pigment Dispersion" />
 								<div class="link-abs">
 									<h2 class="link-col-text">Thursday</h2>
 								</div>
@@ -245,10 +246,8 @@ button:focus {outline:0;}
 				        </div>
 				        <div class="column">
 					        <div class="text">
-					        	-Comedy show featuring: Andrew Stanley, Marcus O'Laire, Foil arms and Hog.</br>
-					        	-PRE SESH, SU 7pm</br>
-								-The Workmans. Tickets 10.00 Door @10.30pm</br>
-								-FRESHERS BALL feature Balgans, Gavin James, ROry Lynam with live SAX		
+					        	-Captain Americas | MAN VS FOOD! @1pm Atrium.</br>
+					        	-Mystery Tour @3pm The SU tickets: 20.00
 					        </div>
 				        </div>
 			        </a>
@@ -256,7 +255,7 @@ button:focus {outline:0;}
 	                <a  class="item active">
 	        	        <div class="column ">
 					        <div class="image">					        
-	                            <img id="ctl00_body_rptProducts_ctl00_imgProduct" class="cover accelerate" src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products1.jpg" alt="antimicrobial alphasan additive prevents odors" />
+	                            <img  class="cover accelerate" src="images/movie.jpg" alt="antimicrobial alphasan additive prevents odors" />
 								<div class="link-abs">
 									<h2 class="link-col-text">Friday</h2>
 								</div>
@@ -265,10 +264,9 @@ button:focus {outline:0;}
 				        <div class="column">
 					        <div class="text">
 						       <div class="text">
-					        	-Comedy show featuring: Andrew Stanley, Marcus O'Laire, Foil arms and Hog.</br>
-					        	-PRE SESH, SU 7pm</br>
-								-The Workmans. Tickets 10.00 Door @10.30pm</br>
-								-FRESHERS BALL feature Balgans, Gavin James, ROry Lynam with live SAX		
+					        	-MOVIE MARATHON DAY!<br>
+					        	-Free food, games and various films showcasing!<br>
+					        	-Join the fun and meet new friends!
 					        </div>	
 					        </div>
 				        </div>

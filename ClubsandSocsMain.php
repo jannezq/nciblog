@@ -129,8 +129,9 @@ button:focus {outline:0;}
 					 </li>
 					<li><a href="forum.php">Forum</a></li>
 					<li><a href="EventsMain.php">Events</a></li>
-					<li><a href="ClubsandSocsMain.php">Clubs & Socs.</a></li>
+					<li><a href="">Clubs & Socs.</a></li>
 					<li><a href="GameQuiz.php">Quiz</a></li>
+					<li><a href="shop/shop.php">Shop</a></li>
 				</ul>
 			</div>
 		</div>
@@ -146,11 +147,11 @@ button:focus {outline:0;}
 	
 	<!--https://bootsnipp.com/snippets/n25gZ-->
     <div class="container">
-       
+           <hr>
         <div class="content">
     		<div class="grid">
     			<figure class="effect-layla">
-    				<img src="images/sports.jpg" alt="img06"/>
+    				<img src="images/basketball.jpg" alt="img06"/>
     				<a href="sports_blog.php">
     				<figcaption>
     					<h2>BasketBall<span>Club</span></h2>
@@ -159,7 +160,7 @@ button:focus {outline:0;}
     			</figure>
     			<figure class="effect-layla">
     			    <a href="news_blog.php">
-    				<img src="images/education.jpg" alt="img03"/>
+    				<img src="images/international2.jpg" alt="img03"/>
     				<figcaption>
     					<h2>International<span>Society</span></h2>
     				</figcaption>
@@ -174,7 +175,7 @@ button:focus {outline:0;}
         <div class="content">
     		<div class="grid">
     			<figure class="effect-layla">
-    				<img src="images/news.png" alt="img06"/>
+    				<img src="images/fashion.jpg" alt="img06"/>
     				<a href="news_blog.php">
     				<figcaption>
     					<h2>Fashion<span>Society</span></h2>
@@ -182,7 +183,7 @@ button:focus {outline:0;}
     				</a>
     			</figure>
     			<figure class="effect-layla">
-    				<img src="img/3.jpg" alt="img03"/>
+    				<img src="images/badminton.jpg" alt="img03"/>
     				<figcaption>
     					<h2>Badminton<span>Club</span></h2>
     				</figcaption>			
@@ -193,9 +194,10 @@ button:focus {outline:0;}
     
     </div>
     
-    <hr>
+
     
     <div id="contact" class=" container ">
+            <hr>
 		<div class="box">
 			<div class="row">
 			  	<div class="col-md-4 ">

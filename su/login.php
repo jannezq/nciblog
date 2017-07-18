@@ -2,11 +2,11 @@
 <html lang="en-us">
 <head>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/forumCss.css">
-	<link rel="stylesheet" href="css/slidercss.css">
-	<link rel="stylesheet" href="css/eventscss.css">
+	<link rel="stylesheet" href="../css/forumCss.css">
+	<link rel="stylesheet" href="../css/slidercss.css">
+	<link rel="stylesheet" href="../css/eventscss.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
 	
@@ -14,8 +14,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  	<script src="mainJavascript.js"></script>
-  	<script src="js/registerValidation.js"></script>
+  	<script src="../mainJavascript.js"></script>
+  	<script src="../js/registerValidation.js"></script>
   	
   	
 	<meta charset="utf-8">
@@ -50,7 +50,7 @@ body {
 	
 	<div class="container text-center" >
 		<div class="jumbotron">
-			<h1>Student Globe NCIRL</h1>
+			<h1>Student Globe NCIRL Shop</h1>
 		</div>
 	</div>
 	
@@ -61,11 +61,8 @@ body {
 				<div class="panel panel-login">
 					<div class="panel-heading">
 						<div class="row">
-							<div class="col-xs-6">
+							<div class="col-xs-12">
 								<a href="#" class="active" id="login-form-link">Login</a>
-							</div>
-							<div class="col-xs-6">
-								<a href="#" id="register-form-link">Register</a>
 							</div>
 						</div>
 						<hr>
@@ -74,13 +71,14 @@ body {
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form action = "login_proccess.php" id="login-form" method="post" role="form" style="display: block;">
+								<form action = "login_process.php" id="login-form" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
+								<!--<div class="form-group">
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-									</div>
+									</div></div>-->
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
@@ -89,7 +87,7 @@ body {
 										</div>
 									</div>
 								</form>
-							<!--Signup form-->
+							<!--Signup form
 								<form id="register-form" action="signup.php" method="post" role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="fname" id="fname" tabindex="1" class="form-control" placeholder="First Name" value="" required>
@@ -103,17 +101,13 @@ body {
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required>
 										<div id="user"></div>
 									</div>
-									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" onchange="email_Valid(this.value);" required>
-										<div class="status" id="status"></div>
-									</div>
-									<div class="form-group">
+								<!--<div class="form-group">	<div class="form-group">
 										<input required type="password" name="password" id="password1" minlength="8" maxlength="16" mtabindex="2" class="form-control" placeholder="Password">
-									</div>
+									</div></div>-->
 									<!--<div class="form-group">
 										<input type="password" name="confirm-password" id="password2" tabindex="2" minlength="8" maxlength="16" class="form-control" placeholder="Confirm Password" onkeyup"checkPass(); return false;" />
 										<span id="confirmMessage" class="confirmMessage"></span>
-									</div>-->
+									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
@@ -121,7 +115,7 @@ body {
 											</div>
 										</div>
 									</div>
-								</form>
+								</form>-->
 							</div>
 						</div>
 					</div>

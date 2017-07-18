@@ -77,11 +77,11 @@ else{
 <html>
 <head>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/categoryCss.css">
-    <link rel="stylesheet" href="css/slidercss.css">
-    <link rel="stylesheet" href="css/eventscss.css">
+    <link rel="stylesheet" href="../css/categoryCss.css">
+    <link rel="stylesheet" href="../css/slidercss.css">
+    <link rel="stylesheet" href="../css/eventscss.css">
     
     
     <!-- Latest compiled and minified JavaScript -->
@@ -107,6 +107,7 @@ body {
 
 a:hover{
 	color: rgb(119, 119, 119);
+		text-decoration: none;
 }
   
 button{
@@ -151,6 +152,10 @@ button:focus {outline:0;}
     display: block;
 }
 
+.textboxID{
+    height:50px;
+}
+
 
 footer {
    position:absolute;
@@ -182,7 +187,7 @@ footer {
                     	<li><div class="dropdown dropMenu">
 						    <button class="dropbtn">Hello <?php  echo $_SESSION["username"];  ?></button>
 						    <div class="dropdown-content">
-						      <a href="admin/admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
+						      <a href="admin_page.php"><?php  echo $_SESSION["username"];  ?> Post</a>
 						      <a href="../logout.php">Logout</a>
 						    </div>
 						</div> 
@@ -203,7 +208,7 @@ footer {
     </div>
     
     <div class="container" >
-        <a href="admin_page.php"><button>Back</button></a>
+        <a href="admin_page.php">Back</a>
         <hr>
         
         <div class="row">
@@ -235,7 +240,7 @@ footer {
                 <div class="form-group row">
                         <label for="inputContent" class="col-sm-2 col-form-label">Content</label>
                         <div class="col-md-8">
-                            <input class="form-control" name="content" type="text" id="exampleTextarea" rows="6"  value="<?php echo $row['content']; ?>">
+                            <input class="form-control textboxID" name="content" type="text" id="exampleTextarea " rows="6"  value="<?php echo $row['content']; ?>">
                         </div>    
                     </div>
                 <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>

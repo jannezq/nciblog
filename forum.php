@@ -131,6 +131,7 @@ button:focus {outline:0;}
 					<li><a href="EventsMain.php">Events</a></li>
 					<li><a href="ClubsandSocsMain.php">Clubs & Socs.</a></li>
 					<li><a href="GameQuiz.php">Quiz</a></li>
+					<li><a href="shop/shop.php">Shop</a></li>
 				</ul>
 			</div>
 		</div>
@@ -181,10 +182,10 @@ button:focus {outline:0;}
     				</a>
     			</figure>
     			<figure class="effect-layla">
-    				<img src="img/3.jpg" alt="img03"/>
+    				<img src="images/interest.png" alt="img03"/>
     				<figcaption>
     					<h2>Interest&Hobbies<span>Forum</span></h2>
-    				</figcaption>			
+    				</figcaption>
     			</figure>
     		</div>
         </div>
@@ -192,9 +193,10 @@ button:focus {outline:0;}
     
     </div>
     
-    <hr>
-    
+ 
     <div id="contact" class=" container ">
+           <hr>
+    
 		<div class="box">
 			<div class="row">
 			  	<div class="col-md-4 ">
