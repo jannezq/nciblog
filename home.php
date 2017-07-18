@@ -262,7 +262,7 @@ button:focus {outline:0;}
 			</div>
 			<div class="col-md-7 text-center">
 				<h1>About Student Globe</h1>
-				<p>Student Globe is your go to hub of information. From 
+				<p>Student<a href="../shop/shop.php"> Globe</a> is your go to hub of information. From 
 				Clubs and Society events to forums. Discuss various topics
 				from news to sports to interest&hobbies. A hub of communitcation between
 			lecturers and students. Check the events to see what is happening around you.</p>
@@ -539,6 +539,15 @@ button:focus {outline:0;}
 		</div>
 	</section>
 	
+	<!-- Container (Shop Section) -->
+		<section class="jk-slider " id="forum" >
+		<hr>
+	    <div class="container dad">
+		  <div class="son-1">
+		  </div>
+		    <a  href="../shop/shop.php" style="text-decoration:none;"><p class="son-text"><span class="son-span">Store</span><br/><br/>Welcome to the NCI store </p></a>
+		</div>
+	</section>
 	<!-- Container (Contact Section) -->
 	<div id="contact" class="container container-fluid bg-grey contacting">
 	  <h1 class="text-center">CONTACT</h1>

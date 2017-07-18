@@ -10,7 +10,7 @@ if(!isset($_SESSION['username'])) { //if not yet logged in
 }
 
 $username = $_SESSION["username"];
-$sql_display = $conn-> query("SELECT * FROM posts WHERE author = '$username'");
+$sql_display = $conn-> query("SELECT * FROM product WHERE author = '$username'");
 
 
 
@@ -18,19 +18,20 @@ $sql_display = $conn-> query("SELECT * FROM posts WHERE author = '$username'");
 
 while ($row = mysqli_fetch_array($sql_display)) {
    
-   $title =  $row["title"];
-   $summary =  $row["summary"];
-   $author =  $row["author"];
-   $category =  $row["category"];
-   $content =  $row["content"];
+   $name =  $row["name"];
+   $size =  $row["size"];
+   $colour =  $row["colour"];
+   $quantity =  $row["quantity"];
+   $price =  $row["price"];
 
    
    $user .='<tr>';
-   $user .='<td>'.$title.'</td>';
-   $user .='<td>'.$summary.'</td>';
-   $user .='<td>'.$author.'</td>';
-   $user .='<td>'.$category.'</td>';
-   $user .='<td><button><a href="edit.php?id='.$row['id'].'">Edit</a></button><button><a href="delete.php?id='.$row['id'].'">Delete</a></button></td>';
+   $user .='<td>'.$name.'</td>';
+   $user .='<td>'.$size.'</td>';
+   $user .='<td>'.$colour.'</td>';
+   $user .='<td>'.$quantity.'</td>';
+   $user .='<td>'.$price.'</td>';
+   $user .='<td><button><a href="delete.1.php?id='.$row['id'].'">Cancel Order</a></button></td>';
 
    $user .='</tr>';
    
@@ -180,24 +181,23 @@ button:focus {outline:0;}
     
     <div class="container">
         <div class="jumbotron">
-            <h1 class="text-right"><?php  echo $_SESSION["username"];  ?>'s Admin Page</h1>
+            <h1 class="text-right"><?php  echo $_SESSION["username"];  ?>'s Orders</h1>
         </div>
     </div>
     
     
     <div class="container">
-        <a href=addpost.php><button>Add New Post</button></a>
-        <a href=vieworders.php><button>View Orders</button></a>
+        <a href=admin_page.php><button>Back</button></a>
         <hr>
         <div class="table-responsive">
             <thead>
                 <table class="table">
                     <tr>
-                        <th>Title</th>
-                        <th>Summary</th>
-                        <th>Author</th>
-                        <th>Category</th>
-                        <th></th>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Colour</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                         <th></th>
                     </tr>
                 <?php echo $user; ?>
